@@ -128,8 +128,6 @@ $(function () {
     });
   }
 
-  //navbar resposive
-  $('.about-video-wrapper').fitVids();
 
 })
 

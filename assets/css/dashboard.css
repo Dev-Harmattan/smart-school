@@ -1,5 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;1,700&display=swap');
 
+
+:root{
+  --white: #ffffff;
+  --arsh: #99ADB6;
+  --blue: #006CE1;
+  --light-blue: #29A9F0;
+  --deep-blue: #006CE1;
+  --dark-ash: #403f52;
+  --light-ash: #6f7581;
+}
+
 /* style scrolling*/
 
 ::-webkit-scrollbar{
@@ -73,7 +84,7 @@ body {
 }
 
 .dash-navbar{
-  background: #ffFFFF;
+  background: var(--white);
   grid-area: nav;
   height: 60px;
   display: flex;
@@ -119,9 +130,9 @@ body {
 .nav-right > a > i {
   color: #a5aaa5;
   font-size: 16px;
-  background: #ffFFFF;
+  background: var(--white);
   border-radius: 50px;
-  box-shadow: 2px 2px 5px #d9d9d9, -2px -2px 5px #ffffff;
+  box-shadow: 2px 2px 5px #d9d9d9, -2px -2px 5px var(--white);
 }
 
 main{
@@ -166,8 +177,8 @@ main{
 .info-card{
   max-height: 100px;
   padding: 25px;
-  background: #ffffff;
-  box-shadow: 5px 5px 13px #ededed, -5px -5px 13px #ffffff;
+  background: var(--white);
+  box-shadow: 5px 5px 13px #ededed, -5px -5px 13px var(--white);
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -195,8 +206,8 @@ main{
 .charts-left{
   padding: 25px;
   border-radius: 5px;
-  background: #ffffff;
-  box-shadow: 5px 5px 5px 13px #ededed, -5px -5px 13px #ffffff;
+  background: var(--white);
+  box-shadow: 5px 5px 5px 13px #ededed, -5px -5px 13px var(--white);
 }
 
 .charts-left-title{
@@ -212,7 +223,7 @@ main{
 }
 
 .charts-left-title > i{
-  color: #ffffff;
+  color: var(--white);
   font-size: 20px;
   background: #ffc100;
   border-radius: 200px 0px 200px 200px;
@@ -229,8 +240,8 @@ main{
 .charts-right{
   padding: 25px;
   border-radius: 5px;
-  background: #ffffff;
-  box-shadow: 5px 5px 13px #ededed, -5px -5px 13px #ffffff;
+  background: var(--white);
+  box-shadow: 5px 5px 13px #ededed, -5px -5px 13px var(--white);
 }
 
 .charts-right-title{
@@ -252,7 +263,7 @@ main{
 }
 
 .charts-right-title > i{
-  color: #ffffff;
+  color: var(--white);
   font-size: 20px;
   background: #394478;
   border-radius: 200px 0px 200px 200px;
@@ -429,8 +440,8 @@ main{
 .user-card{
   padding: 25px;
   max-height: 100px;
-  color: #ffffff;
-  box-shadow: 5px 5px 13px #ededed, -5px -5px 13px #ffFFFF;
+  color: var(--white);
+  box-shadow: 5px 5px 13px #ededed, -5px -5px 13px var(--white);
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -463,8 +474,8 @@ main{
 }
 
 .profile-card-left, .profile-card-right, .exam-info{
-  box-shadow: 5px 5px 13px #ededed, -5px -5px 13px #ffFFFF;
-  background: #ffFFFF;
+  box-shadow: 5px 5px 13px #ededed, -5px -5px 13px var(--white);
+  background: var(--white);
   border-radius: 5px;
   padding: 25px;
   overflow-y: auto;
@@ -545,8 +556,8 @@ main{
 
 .profile-chart{
   padding: 25px;
-  box-shadow: 5px 5px 13px #ededed, -5px -5px 13px #ffFFFF;
-  background: #ffFFFF;
+  box-shadow: 5px 5px 13px #ededed, -5px -5px 13px var(--white);
+  background: var(--white);
   border-radius: 5px;
 }
 
@@ -569,7 +580,7 @@ main{
 }
 
 .profile-left-title > i{
-  color: #ffffff;
+  color: var(--white);
   font-size: 20px;
   background: #394478;
   border-radius: 200px 0px 200px 200px;
@@ -608,7 +619,7 @@ main{
 
 .exam-search > button{
   padding: 5px;
-  color: #ffFFFF;
+  color: var(--white);
   background: #2e4a66;
   outline: none;
   border-radius: 10px;
@@ -641,8 +652,8 @@ main{
 .result-post{
   padding: 25px;
   border-radius: 5px;
-  background: #ffffff;
-  box-shadow: 5px 5px 5px 13px #ededed, -5px -5px 13px #ffffff;
+  background: var(--white);
+  box-shadow: 5px 5px 5px 13px #ededed, -5px -5px 13px var(--white);
   margin-bottom: 20px;
 }
 
@@ -670,7 +681,7 @@ main{
   background: #2e4a66;
   padding: 10px 20px;
   border-radius: 8px;
-  color: #ffFFFF;
+  color: var(--white);
   text-transform: uppercase;
   align-self: center;
   border: none;
@@ -680,7 +691,7 @@ main{
 
 
 .result-post > form > input[type="submit"]:hover{
-  background: #ffFFFF;
+  background: var(--white);
   border: 1px solid #2e4a66;
   color: #2e4a66;
   font-weight: 700;
@@ -690,8 +701,8 @@ main{
 .message-post{
   padding: 25px;
   border-radius: 5px;
-  background: #ffffff;
-  box-shadow: 5px 5px 5px 13px #ededed, -5px -5px 13px #ffffff;
+  background: var(--white);
+  box-shadow: 5px 5px 5px 13px #ededed, -5px -5px 13px var(--white);
   margin-bottom: 20px;
 }
 
@@ -719,7 +730,7 @@ main{
   background: #2e4a66;
   padding: 10px 20px;
   border-radius: 8px;
-  color: #ffFFFF;
+  color: var(--white);
   text-transform: uppercase;
   border: none;
   display: inline-block;
@@ -728,7 +739,7 @@ main{
 
 
 .message-post > form > input[type="submit"]:hover{
-  background: #ffFFFF;
+  background: var(--white);
   border: 1px solid #2e4a66;
   color: #2e4a66;
   font-weight: 700;
@@ -737,8 +748,8 @@ main{
 .student-perform-info{
   padding: 25px;
   border-radius: 5px;
-  background: #ffffff;
-  box-shadow: 5px 5px 5px 13px #ededed, -5px -5px 13px #ffffff;
+  background: var(--white);
+  box-shadow: 5px 5px 5px 13px #ededed, -5px -5px 13px var(--white);
   margin-bottom: 20px;
 }
 
@@ -747,8 +758,8 @@ main{
   width: 100%;
   padding: 25px;
   border-radius: 5px;
-  background: #ffffff;
-  box-shadow: 5px 5px 5px 13px #ededed, -5px -5px 13px #ffffff;
+  background: var(--white);
+  box-shadow: 5px 5px 5px 13px #ededed, -5px -5px 13px var(--white);
   margin-bottom: 20px;
   max-height: 500px;
   overflow-y: auto;

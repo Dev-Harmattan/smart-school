@@ -2,11 +2,13 @@
 
 
 :root{
-  --white: #ffffffff;
+  --white: #ffffff;
   --arsh: #99ADB6;
   --blue: #006CE1;
   --light-blue: #29A9F0;
-  --deep-blue: #4033FF;
+  --deep-blue: #006CE1;
+  --dark-ash: #403f52;
+  --light-ash: #6f7581;
 }
 
 li,p,ul,body{
@@ -22,9 +24,10 @@ a{
 
 body, html{
   font-family: 'Nunito', sans-serif;
-  background-color: #ffffffff;
+  background-color:var(--white);
   height: 100vh;
   font-family: 22px;
+  overflow-x: hidden;
 }
 
 *{
@@ -49,7 +52,7 @@ ul{
   align-items: center;
   position: fixed;
   top: 0;
-  background: #4033FF;
+  background: var(--blue);
   height: 75px;
   padding: 10px 40px;
   width: 100%;
@@ -73,7 +76,7 @@ ul{
 }
 
 .nav-brand:hover, a.nav-active:active{
-  color: #ffffFF;
+  color: var(--white);
   text-decoration: none;
 }
 
@@ -101,7 +104,7 @@ ul{
 }
 
 .nav-list > a:active{
-  color: #403f52;
+  color: var(--dark-ash);
 }
 
 
@@ -134,7 +137,7 @@ ul{
 
 
 .dropdown-content a {
-  color: #006CE1;
+  color: var(--blue);
   text-decoration: none;
   letter-spacing: 2px;
   padding: 7px 16px;
@@ -144,7 +147,7 @@ ul{
 
 
 .dropdown-content a:hover {
-  color: #403f52; 
+  color: var(--dark-ash); 
 }
 
 .show{
@@ -176,7 +179,7 @@ a.login{
 }
 
 .title{
-  color: #ffffFF;
+  color: var(--white);
   font-weight: 700;
   font-size: 35px;
   line-height: 45px;
@@ -191,7 +194,7 @@ a.login{
   display: block;
   width: 50px;
   height: 5px;
-  background: #4033FF;
+  background: var(--blue);
 }
 
 
@@ -290,7 +293,7 @@ a.login{
 }
 
 .info-text a{
-  color: #006CE1;
+  color: var(--blue);
   font-weight: 700;
   font-size: 0.8125em;
   padding: 10px 20px;
@@ -303,9 +306,9 @@ a.login{
 }
 
 .info-text a:hover, .info-text a:active{
-  color: #ffffFF;
-  background: #006CE1;
-  border: 2px solid #ffffff;
+  color: var(--white);
+  background: var(--blue);
+  border: 2px solid var(--white);
 }
 
 #admission{
@@ -320,14 +323,14 @@ a.login{
 }
 
 .admission-title h2{
-  color: #403f52;
+  color: var(--dark-ash);
   font-weight: 700;
   font-size: 2.4em;
   line-height: 56px;
 }
 
 .admission-title p{
-  color: #6f7581;
+  color: var(--light-ash);
   font-size: 0.9375em;
   line-height: 35px;
   font-weight: 400;
@@ -369,7 +372,7 @@ a.login{
 .admisson-type h3{
 font-size: 1.25em;
   font-weight: 700;
-  color: #006CE1;
+  color: var(--blue);
 }
 
 .admisson-type p{
@@ -377,7 +380,7 @@ font-size: 1.25em;
   font-weight: 400;
   line-height: 33px;
   font-size: 0.9375em;
-  color: #6f7581;
+  color: var(--light-ash);
   padding: 0 20px;
   text-align: justify;
   /* width: 250px; */
@@ -394,7 +397,7 @@ font-size: 1.25em;
   font-weight: 700;
   line-height: 40px;
   font-size: 0.8125em;
-  background-color: #006CE1;
+  background-color: var(--blue);
   padding: 10px 40px;
   border-radius: 20px;
   transition: all .3s;
@@ -403,7 +406,7 @@ font-size: 1.25em;
 }
 
 .button a:hover, .button a:active{
-  background: #29A9F0;
+  background: var(--light-blue);
 }
 
 #explore-teacher{
@@ -411,14 +414,14 @@ font-size: 1.25em;
 }
 
 .teacher-text h1{
-  color: #403f52;
+  color: var(--dark-ash);
   font-weight: 700;
   font-size: 2.4em;
   line-height: 48px;
 }
 
 .teacher-text p {
-  color: #6f7581;
+  color: var(--light-ash);
   font-size: 0.9375em;
   line-height: 33px;
   text-align: justify;
@@ -432,7 +435,7 @@ font-size: 1.25em;
   letter-spacing: 1px;
   line-height: 40px;
   font-size: 0.8125em;
-  background-color: #006CE1;
+  background-color: var(--blue);
   padding: 10px 20px;
   border-radius: 20px;
   transition: all .3s;
@@ -440,7 +443,7 @@ font-size: 1.25em;
 }
 
 .teacher-text a:hover, .teacher-text a:active{
-  background: #29A9F0;
+  background: var(--light-blue);
 }
 
 #about{
@@ -448,20 +451,20 @@ font-size: 1.25em;
 }
 
 .about-text h2{
-  color: #006CE1;
+  color: var(--blue);
   font-weight: 700;
   font-size: 1.125em;
 }
 
 .about-text h1{
-  color: #403f52;
+  color: var(--dark-ash);
   font-size: 2.4em;
   line-height: 56px;
   font-weight: 700;
 }
 
 .about-text p{
-  color: #6f7581;
+  color: var(--light-ash);
   font-size: 0.9375em;
   line-height: 33px;
   text-align: justify;
@@ -471,7 +474,7 @@ font-size: 1.25em;
 .about-list{
   list-style-type: circle;
   padding-left: 20px;
-  color: #6f7581;
+  color: var(--light-ash);
   font-size: 0.9375em;
   line-height: 33px;
   font-weight: 400;
@@ -492,13 +495,13 @@ font-size: 1.25em;
   font-size: 1.5625em;
   line-height: 56px;
   font-weight: 700;
-  color: #006CE1;
+  color: var(--blue);
 }
 
 .about-info p{
   font-weight: 700;
   font-size: 0.875em;
-  color: #6f7581;
+  color: var(--light-ash);
 
 }
 
@@ -509,7 +512,7 @@ font-size: 1.25em;
   letter-spacing: 1px;
   line-height: 40px;
   font-size: 0.8125em;
-  background-color: #006CE1;
+  background-color: var(--blue);
   padding: 10px 20px;
   border-radius: 20px;
   transition: all .3s;
@@ -518,9 +521,9 @@ font-size: 1.25em;
 }
 
 .about-text a:hover, .about-text a:active{
-  background: #ffffFF;
-  color: #006CE1;
-  border:2px solid #006CE1;
+  background: var(--white);
+  color: var(--blue);
+  border:2px solid var(--blue);
 }
 
 .student-counter::before{
@@ -652,14 +655,14 @@ font-size: 1.25em;
 }
 
 .why-choose-section-title h1{
-  color: #006CE1;
+  color: var(--blue);
   font-size: 1.8125em;
   line-height: 56px;
   font-weight: 700;
 }
 
 .why-choose-section-title p{
-  color: #6f7581;
+  color: var(--light-ash);
   font-size: 0.875em;
   font-weight: 600;
   line-height: 25px;
@@ -676,7 +679,7 @@ font-size: 1.25em;
 }
 
 .testimonial-title{
-  color: #006CE1;
+  color: var(--blue);
   font-size: 1.125em;
   font-weight: 700;
 }
@@ -711,7 +714,7 @@ font-size: 1.25em;
 }
 
 .testimonial-Slides > q{
-  color: #6f7581;
+  color: var(--light-ash);
   font-size: 0.875em;
   font-weight: 600;
   font-style: italic;
@@ -721,12 +724,12 @@ font-size: 1.25em;
 .author{
   font-size: 1.75em;
   font-weight: 700;
-  color: #006CE1;
+  color: var(--blue);
   line-height: 15px;
 }
 
 .job{
-  color: #6f7581;
+  color: var(--light-ash);
   font-size: 1em;
   font-weight: 700;
   font-style: italic;
@@ -770,7 +773,7 @@ font-size: 1.25em;
   border: none;
   outline: none;
   transition: 0.4s;
-  color: #6f7581;
+  color: var(--light-ash);
   text-transform: uppercase;
   font-weight: 700;
   display: flex;
@@ -778,14 +781,14 @@ font-size: 1.25em;
 }
 
 .active{
-  background-color: #006CE1;
-  color: #ffffFF;
+  background-color: var(--blue);
+  color: var(--white);
 }
 
 .panel {
   padding: 0 18px;
   background-color: white;
-  color: #6f7581;
+  color: var(--light-ash);
   font-size: 1.125em;
   font-weight: 500;
   max-height: 0;
@@ -797,7 +800,7 @@ font-size: 1.25em;
 .bar1, .bar2{
   width: 15px;
   height: 3px;
-  background-color: #6f7581;
+  background-color: var(--light-ash);
   margin: 6px 0;
   transition: 0.4s;
 }
@@ -812,8 +815,8 @@ font-size: 1.25em;
 }
 
 .change .bar1{
-  color: #ffffFF;
-  background-color: #ffffFF;
+  color: var(--white);
+  background-color: var(--white);
 }
 
 #subscribed{
@@ -836,7 +839,7 @@ font-size: 1.25em;
 }
 
 .form-heading{
-  color: #FFFFFF;
+  color: var(--white);
   font-size: 2.4em;
   line-height: 48px;
   font-weight: 700;
@@ -849,7 +852,7 @@ font-size: 1.25em;
   line-height: 50px;
   font-size: 0.9375em;
   color: rgba(162, 161, 178, 0.58);
-  border: 1px solid #6f7581;
+  border: 1px solid var(--light-ash);
   font-weight: 500;
   border-radius: 5px;
 }
@@ -861,10 +864,10 @@ font-size: 1.25em;
 
 .subscribed-form > input[type="submit"]{
   margin-left: 0;
-  background-color: #006CE1;
+  background-color: var(--blue);
   padding: 0 20px;
   border: none;
-  color: #ffffFF;
+  color: var(--white);
   border-radius: 5px;
   font-size: 0.8125em;
   font-weight: 700;
@@ -886,8 +889,8 @@ footer{
 
 #partial-footer{
   padding: 10px 45px;
-  background-color: #006CE1;
-  color: #ffffFF;
+  background-color: var(--blue);
+  color: var(--white);
 }
 
 .school-footer-info, .school-footer-contact, .school-footer-quick-links, .school-footer-teacher{
@@ -896,32 +899,32 @@ footer{
 
 footer h2{
 font-size: 1.25em;
-  color: #ffffFF;
+  color: var(--white);
   font-weight: 700;
 }
 
 .footer a{
   text-align: none;
-  color: #ffffFF;
+  color: var(--white);
   font-size: 0.9375em;
   cursor: pointer;
 }
 
 .school-footer-info p{
-  color: #ffffFF;
+  color: var(--white);
   font-size: 1.125em;
   font-weight: 600;
 }
 
 .school-footer-teacher > p, .school-footer-quick-link > p, .school-footer-contact > p{
-  color: #ffffFF;
+  color: var(--white);
   font-weight: 400;
   font-size: 0.9375em;
 }
 
 .footer-social-media a{
   text-align: none;
-  color: #ffffFF;
+  color: var(--white);
   font-size: 1.25em;
   cursor: pointer;
   text-decoration: none;
@@ -937,7 +940,7 @@ font-size: 1.25em;
 
 .school-footer-teacher > ul > li > a, .school-footer-quick-links > ul > li > a, .school-footer-contact > a{
   text-align: none;
-  color: #ffffFF;
+  color: var(--white);
   font-size: 0.9375em;
   cursor: pointer;
   text-decoration: none;
@@ -949,7 +952,7 @@ font-size: 1.25em;
   text-align: center;
 }
 .copyrite small{
-  color: #ffffFF;
+  color: var(--white);
   font-size: 14;
   font-weight: 700;
   line-height: 45px;
@@ -972,7 +975,7 @@ font-size: 1.25em;
   width: 40%;
   padding: 20px 20px 0px;
   border-radius: 10px;
-  background: #ffffFF;
+  background: var(--white);
 }
 
 #register-main{
@@ -987,11 +990,11 @@ font-size: 1.25em;
   width: 40%;
   padding: 20px 20px 0px;
   border-radius: 10px;
-  background: #ffffFF;
+  background: var(--white);
 }
 
 #login-page h2, #register-page h2{
-  color: #403f52;
+  color: var(--dark-ash);
   font-weight: 700;
   font-size: 2.4em;
   line-height: 48px;
@@ -1005,7 +1008,7 @@ font-size: 1.25em;
   width: 100%;
   padding: 5px;
   font-size: 0.9375em;
-  color: #403f52;
+  color: var(--dark-ash);
   font-weight: 400;
   margin-bottom: 10px;
   border-radius: 10px;
@@ -1022,13 +1025,13 @@ font-size: 1.25em;
 }
 
 .register-form label{
-  color: #403f52;
+  color: var(--dark-ash);
   font-size: 0.9375em;
   font-weight: 400;
 }
 
 .password-direction{
-  color: #403f52;
+  color: var(--dark-ash);
   font-size: 12px;
   line-height: 15px;
   font-weight: 400;
@@ -1039,7 +1042,7 @@ font-size: 1.25em;
   font-weight: 700;
   line-height: 40px;
   font-size: 0.8125em;
-  background-color: #006CE1;
+  background-color: var(--blue);
   padding: 5px 30px;
   border-radius: 10px;
   margin: 10px 0;
@@ -1064,12 +1067,12 @@ font-size: 1.25em;
 
 .signin-register a{
   text-decoration: none;
-  color: #006CE1;
+  color: var(--blue);
   transition: all .5s;
 }
 
 .signin-register a:hover{
-  color: #4033FF;
+  color: var(--blue);
   text-decoration: underline;
 }
 
@@ -1081,7 +1084,7 @@ label > span{
 /* ----------------------------------------------ABOUT PAGE CSS STYLE--------------------------------------------------------------- */
 
 #about-page{
-  background: #ffffFF;
+  background: var(--white);
   margin-top: 75px;
   
 }
@@ -1099,7 +1102,7 @@ label > span{
 
 .about-us-info > h1, .our-story-info > h1, .our-mission-info > h1{
   font-weight: 600;
-  color: #403f52;
+  color: var(--dark-ash);
   font-size: 1.875em;
   line-height: 48px;
 }
@@ -1109,7 +1112,7 @@ label > span{
 .info-sub-paragraph, 
 .mission-sub-paragraph, 
 .our-mission-info > p{
-  color: #6f7581;
+  color: var(--light-ash);
   font-size: 0.9375em;
   line-height: 33px;
   font-weight: 400;
@@ -1123,7 +1126,7 @@ label > span{
 
 .about-class-explore > h1{
   font-weight: 600;
-  color: #403f52;
+  color: var(--dark-ash);
   font-size: 1.875em;
   line-height: 48px;
  
@@ -1134,7 +1137,7 @@ label > span{
   display: block;
   width: 50px;
   height: 5px;
-  background: #4033FF;
+  background: var(--blue);
   margin: 0 auto;
 }
 
@@ -1182,9 +1185,9 @@ label > span{
 }
 
 #real-fact-about-school{
-  background: #4033FF;
+  background: var(--blue);
   padding: 60px 45px;
-  color: #FFFFFF;
+  color: var(--white);
   text-align: center;
 }
 
@@ -1391,7 +1394,7 @@ label > span{
 }
 
 .competition-card-footer p{
-  color: #403f52;
+  color: var(--dark-ash);
   font-size: 0.9375em;
   font-weight: 400;
   line-height: 25px;
@@ -1406,8 +1409,8 @@ label > span{
 }
 
 #ready-to-register{
-  background: #4033FF;
-  color: #ffffFF;
+  background: var(--blue);
+  color: var(--white);
   padding: 60px 45px;
 }
 
@@ -1433,7 +1436,7 @@ label > span{
 .ready-button{
   background: #68E1FD;
   padding: 15px 30px;
-  color: #ffffFF;
+  color: var(--white);
   text-decoration: none;
   border-radius: 10px;
   display: block;
@@ -1441,8 +1444,8 @@ label > span{
 
 .ready-button:hover{
   text-decoration: none;
-  background: #29A9F0;
-  color: #ffffFF;
+  background: var(--light-blue);
+  color: var(--white);
 }
 
 
@@ -1453,7 +1456,7 @@ label > span{
 }
 #admission-page{
   margin-top: 75px;
-  background: #ffffFF;
+  background: var(--white);
 }
 
 .school-image-top{
@@ -1468,7 +1471,7 @@ label > span{
 
 .admission-procedure > h1, .online-admission > h1{
   font-weight: 600;
-  color: #403f52;
+  color: var(--dark-ash);
   font-size: 1.875em;
   line-height: 48px;
   margin-top: 40px;
@@ -1476,14 +1479,14 @@ label > span{
 
 .admisson-step > li, .online-admission > p, .online-admission-procedure > li{
   line-height: 40px;
-  color: #6f7581;
+  color: var(--light-ash);
   font-size: 0.9375em;
   font-weight: 500;
 }
 
 .admission-requirement > li:before, .online-admission-procedure > li:before{
   content: "\2713\0020";
-  color: #4033FF;
+  color: var(--blue);
   width: 10px;
   font-weight: 700;
   margin-right: 2px;
@@ -1499,8 +1502,8 @@ label > span{
   width: 100%;
   padding: 15px;
   text-align: center;
-  background: #4033FF;
-  color: #ffffFF;
+  background: var(--blue);
+  color: var(--white);
   text-decoration: none;
   border-radius: 10px;
   transition: all .5s;
@@ -1510,7 +1513,7 @@ label > span{
 
 .block-button:hover, .block-button:hover:active{
   text-decoration: none;  
-  color: #ffffFF;  
+  color: var(--white);  
   border-bottom: 3px solid #2118a0;
 }
 
@@ -1518,7 +1521,7 @@ label > span{
 
 /* -------------------------------------------------------BOARDING PAGE CSS STYLE-------------------------------------------------- */
 #boarding-page{
-  background: #ffffFF;
+  background: var(--white);
   margin-top: 75px;
 }
 
@@ -1555,7 +1558,7 @@ label > span{
 
 .boarding-principal h3{
   font-weight: 700;
-  color: #4033FF;
+  color: var(--blue);
   font-size: 20px;
   line-height: 30px;
 }
@@ -1568,7 +1571,7 @@ label > span{
 
 .boarding-principal-speech  > P{
   line-height: 30px;
-  color: #6f7581;
+  color: var(--light-ash);
   font-size: 0.9375em;
   font-weight: 400;
   text-align: justify;
@@ -1580,8 +1583,8 @@ label > span{
 }
 
 .bording-button > a{
-  background: #4033FF;
-  color: #ffffFF;
+  background: var(--blue);
+  color: var(--white);
   padding: 15px 30px;
   font-weight: 500;
   text-decoration: none;
@@ -1611,7 +1614,7 @@ label > span{
 }
 
 #why-choose-boarding > h1, .boarding-experience > h1{
-  color: #006CE1;
+  color: var(--blue);
   font-weight: 700;
   font-size: 1.875em;
   line-height: 45px;
@@ -1619,7 +1622,7 @@ label > span{
 
 #why-choose-boarding > p, .boarding-experience > p{
   text-align: justify;
-  color: #6f7581;
+  color: var(--light-ash);
   font-size: 0.9375em;
   line-height: 35px;
   font-weight: 400;
@@ -1630,17 +1633,17 @@ label > span{
 }
 
 .boarding-accordion{
-  background: #ffffFF;
+  background: var(--white);
   cursor: pointer;
   padding: 18px;
   width: 100%;
   text-align: left;
   border-width: 1px 1px 0;
-  border-color: #006CE1;
+  border-color: var(--blue);
   border-style: solid;
   outline: none;
   transition: 0.4s;
-  color: #6f7581;
+  color: var(--light-ash);
   text-transform: uppercase;
   font-weight: 700;
   display: flex;
@@ -1654,21 +1657,21 @@ label > span{
 
 .accordion-panel {
   padding: 0 18px;
-  background-color:#ffffFF;
-  color: #6f7581;
+  background-color:var(--white);
+  color: var(--light-ash);
   font-size: 1.125em;
   font-weight: 500;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
-  border: 1px solid #006CE1;
+  border: 1px solid var(--blue);
 
 }
 
 .accordion-bar1, .accordion-bar2{
   width: 15px;
   height: 3px;
-  background-color: #6f7581;
+  background-color: var(--light-ash);
   margin: 6px 0;
   transition: 0.4s;
 }
@@ -1687,7 +1690,7 @@ label > span{
 }
 
 .border.accordion-panel{
-  border: 1px solid #006CE1;
+  border: 1px solid var(--blue);
 }
 
 
@@ -1703,7 +1706,7 @@ label > span{
 
 #curriculum-page{
   margin-top: 75px;
-  background: #ffffFF;
+  background: var(--white);
 }
 
 .creche-wrapper{
@@ -1732,14 +1735,14 @@ label > span{
 
 .curriculum-info > h1{
   font-weight: 600;
-  color: #403f52;
+  color: var(--dark-ash);
   font-size: 1.875em;
   line-height: 48px;
 }
 
 .curriculum-info > h2{
   font-weight: 700;
-  color: #403f52;
+  color: var(--dark-ash);
   font-size: 1.5625em;
   line-height: 48px;
 }
@@ -1747,7 +1750,7 @@ label > span{
 
 .curriculum-info > p{
   /* line-height: 30px; */
-  color: #6f7581;
+  color: var(--light-ash);
   font-size: 0.9375em;
   font-weight: 400;
   text-align: justify;
@@ -1767,7 +1770,7 @@ label > span{
 
 .nursery-curriculum > p {
   font-weight: 600;
-  color: #6f7581;
+  color: var(--light-ash);
   font-size: 0.9375em;
 }
 .nursery-image-wrapper{
@@ -1794,7 +1797,7 @@ label > span{
 }
 .primary-title > h1 , .primary-organizaztion, .primary-info >h2{
   font-weight: 700;
-  color: #403f52;
+  color: var(--dark-ash);
   font-size: 1.25em;
   line-height: 25px;
 }
@@ -1808,7 +1811,7 @@ label > span{
 
 .primary-slide-1 >img, .primary-slide-2 >img{
   max-width: 100%;
-  box-shadow: 1px 1px 3px #4033FF, -1px -1px 3px #4033FF ;
+  box-shadow: 1px 1px 3px var(--blue), -1px -1px 3px var(--blue) ;
 }
 
 .dot-wrapper{
@@ -1832,7 +1835,7 @@ label > span{
 }
 
 .primary-info p{
-  color: #6f7581;
+  color: var(--light-ash);
   font-size: 0.9375em;
   font-weight: 400;
   text-align: justify;
@@ -1846,7 +1849,7 @@ label > span{
   display: block;
   width: 100%;
   height: 1px;
-  background: #6f7581;
+  background: var(--light-ash);
   margin: 20px 0;
 
 }
@@ -1859,13 +1862,13 @@ label > span{
 
 .principal-speech-wrapper >h1, .secondary-curriculum-wrapper > h1{
   font-weight: 700;
-  color: #403f52;
+  color: var(--dark-ash);
   font-size: 1.25em;
   line-height: 25px;
 }
 
 .principal-speech-wrapper >p, .secondary-curriculum-wrapper > p{
-  color: #6f7581;
+  color: var(--light-ash);
   font-size: 0.9375em;
   font-weight: 400;
   text-align: justify;
@@ -1888,7 +1891,7 @@ label > span{
 .secondary-card-info{
   background: #0e8ba7;
   padding: 20px;
-  color: #ffffFF;
+  color: var(--white);
   text-align: center;
 }
 
@@ -1922,7 +1925,7 @@ label > span{
 .admission-contact > a{
   text-decoration: none;
   cursor: pointer;
-  color: #ffffFF;
+  color: var(--white);
   font-size: 0.9375em;
   font-weight: 400;
   display: block;
@@ -1946,7 +1949,7 @@ label > span{
 
 #contact-form > label{
   /* display: block; */
-  color: #403f52;
+  color: var(--dark-ash);
   font-weight: 400;
   font-size: 15px;
 }
@@ -1955,20 +1958,20 @@ label > span{
   width: 100%;
   margin-bottom: 5px;
   padding: 4px;
-  color: #403f52;
+  color: var(--dark-ash);
   outline: none;
   border: 1px solid #d8d7e2;
 }
 
 #contact-form > input[type="submit"]{
   padding: 10px 15px;
-  color: #ffffFF;
-  background: #4033FF;
+  color: var(--white);
+  background: var(--blue);
   border: none;
 }
 
 #contact-form > input[type="submit"]:hover{
-  border: 2px solid #403f52;
+  border: 2px solid var(--dark-ash);
 }
 
 #contact-form > input[type="text"]:focus, input[type="email"]:focus{
@@ -1978,7 +1981,7 @@ label > span{
 
 .contact-info >h1{
   font-weight: 700;
-  color: #403f52;
+  color: var(--dark-ash);
   font-size: 1.25em;
   line-height: 25px;
 }
@@ -1987,7 +1990,7 @@ label > span{
   display: block;
   line-height: 33px;
   text-decoration: none;
-  color: #6f7581;
+  color: var(--light-ash);
   font-size: 0.9375em;
   font-weight: 600;
   line-height: 35px;
@@ -2002,7 +2005,7 @@ i.fas, i.far{
 /* -----------------------Student registration onboading home page css style------------------------------------------- */
 
 #student-register{
-  background-color: #4033FF;
+  background-color: var(--blue);
   padding: 100px 0;
   height: 100%;
 }
@@ -2017,7 +2020,7 @@ i.fas, i.far{
   
 } */
 #onboard{
-  background-color: #4033FF;
+  background-color: var(--blue);
   padding: 200px 30px 0;
   height: 100%;
 }
@@ -2035,7 +2038,7 @@ i.fas, i.far{
 }
 
 .welcome-message > h1{
-  color: #ffffFF;
+  color: var(--white);
   font-weight: 700;
   font-size: 2.4em;
   line-height: 56px;
@@ -2055,7 +2058,7 @@ i.fas, i.far{
 
 
 .proceed-button > a{
-  background: #ffffFF;
+  background: var(--white);
   color: #0e8ba7;
   padding: 10px 15px;
   border-radius: 2px;
@@ -2107,7 +2110,7 @@ i.fas, i.far{
 }
 
 .form-progress .progress-step .bullet:after{
-  background: #4033FF;
+  background: var(--blue);
   transform: scaleX(0);
   transform-origin: left;
   animation: animate-bar 0.3s linear forwards;
@@ -2126,7 +2129,7 @@ i.fas, i.far{
 }
 
 .bullet.active{
-  background: #006CE1;
+  background: var(--blue);
 }
 
 
@@ -2139,13 +2142,13 @@ i.fas, i.far{
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #4033FF;
+  background: var(--blue);
  
 }
 
 
 .register-container{
-  background: #ffffFF;
+  background: var(--white);
   width: 450px;
   padding: 40px;
   border-radius: 10px;
@@ -2156,7 +2159,7 @@ i.fas, i.far{
   font-weight: 600;
   font-size: 25px;
   line-height: 33px;
-  color: #4033FF;
+  color: var(--blue);
   text-align: center;
   /* margin-bottom: 40px; */
 }
@@ -2166,7 +2169,7 @@ i.fas, i.far{
   font-weight: 500;
   font-size: 18px;
   line-height: 33px;
-  color: #403f52;
+  color: var(--dark-ash);
   text-align: left;
   margin-bottom: 10px;
 }
@@ -2175,7 +2178,7 @@ i.fas, i.far{
 .form-outer form  label{
   display: block;
   font-size: 14px;
-  color: #403f52;
+  color: var(--dark-ash);
   font-weight: 400;
 }
 
@@ -2222,10 +2225,10 @@ input.invalid{
 
 
 .buttons button{
-  background: #4033FF;
+  background: var(--blue);
   font-weight: 500;
   font-size: 14px;
-  color: #ffffFF;
+  color: var(--white);
   padding: 10px 15px;
   border: none;
 
@@ -2241,14 +2244,14 @@ input.invalid{
 .loader-text{
   font-weight: 500;
   font-size: 18px;
-  color: #4033FF;
+  color: var(--blue);
 }
 
 
 #loader{
   border: 16px solid #f3f3f3;
-  border-top: 16px solid #4033FF;
-  border-bottom: 16px solid #4033FF;
+  border-top: 16px solid var(--blue);
+  border-bottom: 16px solid var(--blue);
   border-radius: 50%;
   width: 120px;
   height: 120px;
@@ -2305,7 +2308,7 @@ input.invalid{
 
   .nav-list{
     opacity: 0;
-    border-bottom: 1px solid #6f7581;
+    border-bottom: 1px solid var(--light-ash);
     width: 100%;
   }
 
@@ -2362,8 +2365,8 @@ input.invalid{
   }
 
   #ready-to-register{
-    background: #4033FF;
-    color: #ffffFF;
+    background: var(--blue);
+    color: var(--white);
     padding: 60px 30px;
   }
 
@@ -2377,7 +2380,7 @@ input.invalid{
     padding: 0 30px 45px;
   }
   #admission-page{
-    background: #ffffFF;
+    background: var(--white);
   }
   .school-image-top{
     max-height: 20vh;
@@ -2446,7 +2449,7 @@ input.invalid{
 
   .nav-list{
     opacity: 0;
-    border-bottom: 1px solid #6f7581;
+    border-bottom: 1px solid var(--light-ash);
     width: 100%;
   }
 
@@ -2512,8 +2515,8 @@ input.invalid{
   }
 
   #ready-to-register{
-    background: #4033FF;
-    color: #ffffFF;
+    background: var(--blue);
+    color: var(--white);
     padding: 60px 30px;
   }
 
@@ -2527,7 +2530,7 @@ input.invalid{
     padding: 0 30px 45px;
   }
   #admission-page{
-    background: #ffffFF;
+    background: var(--white);
   }
   .school-image-top{
     max-height: 30vh;
@@ -2596,7 +2599,7 @@ input.invalid{
 
   .nav-list{
     opacity: 0;
-    border-bottom: 1px solid #6f7581;
+    border-bottom: 1px solid var(--light-ash);
     width: 100%;
   }
 
@@ -2669,7 +2672,7 @@ input.invalid{
   }
   #admission-page{
     padding: 70px 0px;
-    background: #ffffFF;
+    background: var(--white);
   }
   .school-image-top{
     max-height: 30vh;
@@ -2748,7 +2751,7 @@ input.invalid{
 
   .nav-list{
     opacity: 0;
-    border-bottom: 1px solid #6f7581;
+    border-bottom: 1px solid var(--light-ash);
     width: 100%;
   }
 
@@ -2828,7 +2831,7 @@ input.invalid{
   }
   #admission-page{
     padding: 70px 0px;
-    background: #ffffFF;
+    background: var(--white);
   }
   .school-image-top{
     max-height: 30vh;
@@ -2896,7 +2899,7 @@ input.invalid{
 
   .nav-list{
     opacity: 0;
-    border-bottom: 1px solid #6f7581;
+    border-bottom: 1px solid var(--light-ash);
     width: 100%;
   }
 
@@ -2976,7 +2979,7 @@ input.invalid{
   }
   #admission-page{
     padding: 70px 0px;
-    background: #ffffFF;
+    background: var(--white);
   }
   .school-image-top{
     max-height: 30vh;
@@ -3079,7 +3082,7 @@ input.invalid{
 }
 
 .not-found-text{
-  color:#ffffff;
+  color:var(--white);
   margin-top: 200px;
 }
 

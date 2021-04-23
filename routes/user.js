@@ -28,6 +28,7 @@ const { createUser, userRegister,
      } = require('../controller/user');
 const { validateUserRegister, isUserRequestValidate, validateUserLogin,
     validateStudentRegister} = require('../middleware/validation');
+const {getMessages, getResult, getResults} = require('../middleware/makeRequests');
 
 const router = express.Router();
 
@@ -48,10 +49,11 @@ router.get('/student/dashboard', ensureLoggedIn('/user/login'), studentDashboard
 
 router.get('/admin/dashboard', ensureLoggedIn('/user/login'), adminDashboard);
 
-router.get('/student/dashboard/profile', ensureLoggedIn('/user/login'), adminUser);
+router.get('/student/dashboard/profile', ensureLoggedIn('/user/login'), getMessages, getResult, adminUser);
 
 router.route('/student/dashboard/setting')
-    .get(userSetting)
+    .get(getResults, userSetting)
     .post();
 
+    
 module.exports = router;

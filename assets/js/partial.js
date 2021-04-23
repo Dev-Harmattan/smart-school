@@ -99,7 +99,7 @@ $(function(){
     if(primarySlideIndex > primarySlides.length){ primarySlideIndex = 1}
     if(primarySlides[primarySlideIndex - 1]){
       primarySlides[primarySlideIndex - 1].style.display = 'block';
-      primaryDots[primarySlideIndex - 1].style.backgroundColor = "#4033FF"
+      primaryDots[primarySlideIndex - 1].style.backgroundColor = "var(--blue)"
     }
     setTimeout(primarySlideOne, 2000);
   }
@@ -130,7 +130,7 @@ $(function(){
     if(primarySlideIndexTwo > primarySlides.length){ primarySlideIndexTwo = 1}
     if(primarySlides[primarySlideIndexTwo - 1]){
       primarySlides[primarySlideIndexTwo - 1].style.display = 'block';
-      primaryDots[primarySlideIndexTwo - 1].style.backgroundColor = "#4033FF"
+      primaryDots[primarySlideIndexTwo - 1].style.backgroundColor = "var(--blue)"
     }
     setTimeout(primarySlideTwo, 2000);
   }

@@ -181,6 +181,7 @@ exports.createStudentRegister = (req, res) => {
 };
 
 exports.studentDashboard = (req, res) => {
+  console.log(req.session.user);
   return res.render("dashboard", {
     title: "dashboard home",
     auth: req.session.user,
@@ -205,44 +206,27 @@ exports.adminUser = (req, res) => {
       if (err) {
         console.log(err);
       } else {
-        const userId = req.session.user.user._id;
-        let messages = [];
-        axios(`http://localhost:8080/admin/dashboard/message`)
-          .then((response) => {
-            messages = response.data.message;
-          })
-          .catch((err) => console.log(err));
-
-
-        axios(`http://localhost:8080/admin/dashboard/result/${userId}`)
-          .then((response) => {
-            return res.render("dashboard", {
-              title: "user",
-              auth: req.session.user,
-              userDetails: user,
-              result: response.data.data,
-              status: '',
-              message: messages
-            });
-          })
-          .catch((err) => console.log(err));
+        return res.render("dashboard", {
+          title: "user",
+          auth: req.session.user,
+          userDetails: user,
+          result: req.result,
+          status: '',
+          message: req.messages
+        });
       }
     });
 };
 
 exports.userSetting = ( req, res ) => {
-
-  axios(`http://localhost:8080/admin/dashboard/result`)
-          .then((response) => {
-            return res.render("dashboard", {
-              title: "userSetting",
-              auth: req.session.user,
-              userDetails: '',
-              result: response.data.data,
-              status: '',
-              message:''
-            });
-          })
-          .catch((err) => console.log(err));
+  return res.render("dashboard", {
+    title: "userSetting",
+    auth: req.session.user,
+    userDetails: '',
+    result: req.results,
+    status: '',
+    message:''
+  });
+  
 
 }
