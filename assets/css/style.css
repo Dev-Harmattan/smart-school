@@ -1003,7 +1003,7 @@ font-size: 1.25em;
 
 
 
-.register-form input[type="text"],
+
 .register-form input[type="email"], 
 .register-form input[type="password"]{
   width: 100%;
@@ -1017,7 +1017,7 @@ font-size: 1.25em;
   background: #F8F8FF;
 }
 
-.register-form input[type="text"]:focus,
+
 .register-form input[type="email"]:focus, 
 .register-form input[type="password"]:focus{
   outline-color: rgba(64, 51, 255, 0.5);

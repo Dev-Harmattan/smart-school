@@ -181,7 +181,6 @@ exports.createStudentRegister = (req, res) => {
 };
 
 exports.studentDashboard = (req, res) => {
-  console.log(req.session.user);
   return res.render("dashboard", {
     title: "dashboard home",
     auth: req.session.user,
