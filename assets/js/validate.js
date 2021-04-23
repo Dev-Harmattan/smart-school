@@ -2,7 +2,7 @@ $(function(){
 
   let prevButton =  document.getElementById('prevButton'); 
   let nextButton = document.getElementById('nextButton');
-
+  
   prevButton.addEventListener('click', function(){
     nextPrev(-1)
   });

@@ -1,6 +1,5 @@
+<% if(title==="Register" || title==="Login" || title==="Student registration" ){ %>
 
-  <% if(title === "Register" || title === "Login" || title === "Student registration" ){  %>
-    
   <% }else{ %>
     <footer>
       <div class="row">
@@ -14,10 +13,10 @@
             <div class="footer-social-media">
               <a href=""><i class="fab fa-facebook-square"></i></a>
               <a href=""><i class="fab fa-twitter"></i></a>
-              <a href=""><i class="fab fa-instagram"></i></a>        
+              <a href=""><i class="fab fa-instagram"></i></a>
             </div>
           </div>
-          
+
         </div>
         <div class="col-md-3">
           <div class="school-footer-teacher">
@@ -33,9 +32,9 @@
           <div class="school-footer-contact">
             <h2>Contact</h2>
             <p>43 Raymouth Rd. Baltemoer, London 3910</p>
-            <a style="display: block;"  href="tel:2348160149421">Tel: +234(0)8160149421</a>
             <a style="display: block;" href="tel:2348160149421">Tel: +234(0)8160149421</a>
-            <a style="display: block;"  href="mailto:ganiyusodiq059@gmail.com">ganiyusodiq059@gmail.com</a>
+            <a style="display: block;" href="tel:2348160149421">Tel: +234(0)8160149421</a>
+            <a style="display: block;" href="mailto:ganiyusodiq059@gmail.com">ganiyusodiq059@gmail.com</a>
           </div>
         </div>
         <div class="col-md-3">
@@ -56,17 +55,22 @@
         <small>&copy; Smart school 2021</small>
       </div>
     </footer>
-  <% } %>
-  <script src="/jquery/dist/jquery.min.js"></script>
-  <!-- <script src="/js/bootstrap.bundle.min.js"></script> -->
-  <script src="/bootstrap/dist/js/bootstrap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/fitvids/1.2.0/jquery.fitvids.min.js"></script>
-  <%if(title === "Home"){%>
-    <script src="/js/script.js"></script>
-  <%}else{%>
-    <script src="/js/partial.js"></script>
-    <script src="/js/validate.js"></script>
-  <%}%>
-</body>
-</html>
- 
+    <% } %>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous"></script>
+      <script src="/jquery/dist/jquery.min.js"></script>
+      <script src="/bootstrap/dist/js/bootstrap.min.js"></script>
+      <%if(title==="Home" ){%>
+        <script src="/js/script.js"></script>
+
+        <%}else if(title==='Student registration' ){%>
+          <script src="/js/partial.js"></script>
+          <script src="/js/validate.js"></script>
+          <%}else{%>
+            <script src="/js/partial.js"></script>
+            <!-- <script src="/js/validate.js"></script> -->
+            <%}%>
+              </body>
+
+              </html>
