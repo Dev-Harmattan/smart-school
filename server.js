@@ -20,9 +20,7 @@ const adminRoute = require('./routes/admin');
 const app =  express();
 
 //database connection
-const DBUSER = process.env.DBUSER;
-const DBPASSWORD = process.env.DBPASSWORD;
-const dbUrl = `mongodb+srv://${DBUSER}:${DBPASSWORD}@cluster0.bbitn.mongodb.net/smartSchoolDB?retryWrites=true&w=majority`;
+const dbUrl = process.env.DATABASE_URL;
 mongoose.connect(
   dbUrl,
   {useNewUrlParser: true, useUnifiedTopology: true}, 
@@ -64,7 +62,7 @@ app.use(require('express-session')({
   saveUninitialized: false,
   cookie: {maxAge: 30 * 24 * 60 * 60 * 1000},
   store: new MongoStore({
-    mongoUrl: `mongodb+srv://${DBUSER}:${DBPASSWORD}@cluster0.bbitn.mongodb.net/smartSchoolDB?retryWrites=true&w=majority`,
+    mongoUrl: process.env.DATABASE_URL,
     ttl: 24 * 60 * 60 // Keeps session open for 1 day
   })
 }));
