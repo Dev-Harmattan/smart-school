@@ -39,13 +39,8 @@ app.set('views', [path.join(process.cwd() +  '/views'),
                   path.join(process.cwd() +  '/views/portal'),
                   path.join(process.cwd() +  '/views/dashboard')]);
 
-//express static
-app.use('/css', express.static(path.join(process.cwd() + '/assets/css')));
-app.use('/css', express.static(path.join(process.cwd() + '/node_modules/bootstrap/dist/css')));
-app.use('/js', express.static(path.join(process.cwd() +'/assets/js')));
-app.use('/js', express.static(path.join(process.cwd() +'/node_modules/bootstrap/dist/js')));
-app.use('/img', express.static(path.join(process.cwd() + '/assets/img')));
-app.use('/upload', express.static(path.join(process.cwd() + '/assets/upload')));
+app.use(express.static(path.join(process.cwd() + '/assets')));
+app.use('/bootstrap', express.static(path.join(process.cwd() + '/node_modules/bootstrap')));
 app.use('/jQuery', express.static(path.join(process.cwd() + '/node_modules/jquery')))
 
 
