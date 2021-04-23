@@ -1,0 +1,3089 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,300;1,400;1,600;1,700&display=swap');
+
+
+:root{
+  --white: #ffffffff;
+  --arsh: #99ADB6;
+  --blue: #006CE1;
+  --light-blue: #29A9F0;
+  --deep-blue: #4033FF;
+}
+
+li,p,ul,body{
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+
+a{
+  text-decoration: none;
+}
+
+
+body, html{
+  font-family: 'Nunito', sans-serif;
+  background-color: #ffffffff;
+  height: 100vh;
+  font-family: 22px;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+ul{
+  list-style: none;
+}
+
+
+.click-button{
+  margin: 20px 0;
+  display: inline-block;
+}
+
+/* --------------------------------------NAVBAR CSS STYLE------------------------------------------------------------ */
+
+#nav-bar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  background: #4033FF;
+  height: 75px;
+  padding: 10px 40px;
+  width: 100%;
+  z-index: 1;
+  font-weight: 700;
+}
+
+.nav-wrapper{
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-brand{
+  font-weight: 900;
+  color: var(--white);
+  text-decoration: none;
+  font-size: 1.25em;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.nav-brand:hover, a.nav-active:active{
+  color: #ffffFF;
+  text-decoration: none;
+}
+
+.nav-wrapper{
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-list{
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list > a {
+  color: var(--white);
+  font-weight: 600;
+  font-size: 0.875em;
+  text-decoration: none;
+  transition: all .3s;
+  margin-right: 30px;
+  /* line-height: 25px; */
+  transition: text-decoration .5s;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.nav-list > a:active{
+  color: #403f52;
+}
+
+.dropdown{
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-button{
+  transition: all .3s;
+  transition: text-decoration .5s;
+  cursor: pointer;
+}
+
+
+.dropdown-content{
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 10px;
+}
+
+
+.dropdown-content a {
+  color: #006CE1;
+  text-decoration: none;
+  letter-spacing: 2px;
+  padding: 7px 16px;
+  display: block;
+
+}
+
+
+.dropdown-content a:hover {
+  color: #403f52; 
+}
+
+.show{
+  display: block;
+}
+
+a.login{
+  border: 2px solid var(--white);
+  padding: 5px 20px;
+  border-radius: 10px;
+  margin-left: 70px;
+}
+
+.hambug {
+  display: none;
+  cursor: pointer;
+}
+
+.hambug  div{
+  width: 25px;
+  height: 3px;
+  margin: 5px;
+  background-color: var(--white);
+  transition: all 0.2s ease-in;
+}
+
+.nav-list > a:hover, .nav-list > a:active{
+  color: var(--arsh);
+}
+
+.title{
+  color: #ffffFF;
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 45px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.title:after{
+  content: '';
+  display: block;
+  width: 50px;
+  height: 5px;
+  background: #4033FF;
+}
+
+
+
+
+/* ---------------------------------------------HOME PAGE CSS STYLE------------------------------------------------- */
+#info{
+  margin-top: 75px;
+}
+
+.info-text-wrapper{
+  background-color: var(--deep-blue);
+  padding: 30px 45px 30px;
+  /* width: 100%; */
+
+}
+
+.info-image{
+  padding: 0 45px;
+}
+
+.info-image img{
+  width: 500px;
+  max-width: 500px;
+  height: auto;
+  animation: image-animation 1s linear;
+  -webkit-animation: image-animation 1s linear;
+  -o-animation: image-animation 1s linear;
+  -moz-animation: image-animation 1s linear;
+}
+
+.explore-image{
+  margin-bottom: 20px;
+}
+
+.explore-image img{
+  width: 500px;
+  max-width: 500px;
+  height: auto;
+  animation: left-display 1s linear 2s;
+  -moz-animation: left-display 1s linear 2s;
+  -webkit-animation: left-display 1s linear 2s;
+  -o-animation: left-display 1s linear 2s;
+}
+
+
+
+@keyframes image-animation {
+  0% {
+    transform: translateX(100%);
+  }
+  50%{
+    transform: translateX(50%);
+  }
+  100%{
+    transform: translateX(0%);
+  }
+}
+
+.info-text h1{
+  color: var(--white);
+  font-weight: 700;
+  font-size: 2.4em;
+  line-height: 48px;
+}
+
+.info-text h2{
+  color: #b4cdff;
+  font-size: 1.875em;
+  line-height: 25px;
+  font-weight: 700;
+  animation: left-display 1s linear;
+  -moz-animation: left-display 1s linear;
+  -webkit-animation: left-display 1s linear;
+  -o-animation: left-display 1s linear;
+}
+
+@keyframes left-display {
+  0%{
+    transform: translateX(-100%);
+  }
+  50%{
+    transform: translateX(-50%);
+  }
+  100%{
+    transform: translateX(-0%);
+  }
+}
+
+
+.info-text p {
+  color: #b4cdff;
+  font-size: 0.9375em;
+  line-height: 33px;
+  font-weight: 400;
+}
+
+.info-text a{
+  color: #006CE1;
+  font-weight: 700;
+  font-size: 0.8125em;
+  padding: 10px 20px;
+  background-color: var(--white);
+  border-radius: 20px;
+  text-decoration: none;
+  transition: all .3s;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.info-text a:hover, .info-text a:active{
+  color: #ffffFF;
+  background: #006CE1;
+  border: 2px solid #ffffff;
+}
+
+#admission{
+  padding: 60px 45px;
+  background-color: var(--white);
+}
+
+.admission-title{
+  text-align: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.admission-title h2{
+  color: #403f52;
+  font-weight: 700;
+  font-size: 2.4em;
+  line-height: 56px;
+}
+
+.admission-title p{
+  color: #6f7581;
+  font-size: 0.9375em;
+  line-height: 35px;
+  font-weight: 400;
+}
+
+.admisson-type{
+  text-align: center;
+  align-items: center;
+}
+
+.admisson-type img{
+  max-width: 200px;
+  width: 200px;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  animation: admission-image 1s linear 2s;
+  -moz-animation: admission-image 1s linear 2s;
+  -webkit-animation: admission-image 1s linear 2s;
+  -o-animation: admission-image 1s linear 2s;
+}
+
+@keyframes admission-image {
+  0%{
+    opacity: 0;
+    transform: rotate(180deg)
+  }
+  50%{
+    transform:rotate(90deg);
+    opacity: .5;
+  }
+  100%{
+    transform: scale(45deg);
+    opacity: 1;
+  }
+}
+
+
+.admisson-type h3{
+font-size: 1.25em;
+  font-weight: 700;
+  color: #006CE1;
+}
+
+.admisson-type p{
+  display: inline-block;
+  font-weight: 400;
+  line-height: 33px;
+  font-size: 0.9375em;
+  color: #6f7581;
+  padding: 0 20px;
+  text-align: justify;
+  /* width: 250px; */
+}
+.button{
+  align-items: center;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.button a{
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 700;
+  line-height: 40px;
+  font-size: 0.8125em;
+  background-color: #006CE1;
+  padding: 10px 40px;
+  border-radius: 20px;
+  transition: all .3s;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.button a:hover, .button a:active{
+  background: #29A9F0;
+}
+
+#explore-teacher{
+  padding: 70px 45px;
+}
+
+.teacher-text h1{
+  color: #403f52;
+  font-weight: 700;
+  font-size: 2.4em;
+  line-height: 48px;
+}
+
+.teacher-text p {
+  color: #6f7581;
+  font-size: 0.9375em;
+  line-height: 33px;
+  text-align: justify;
+  font-weight: 400;
+}
+
+.teacher-text a{
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 40px;
+  font-size: 0.8125em;
+  background-color: #006CE1;
+  padding: 10px 20px;
+  border-radius: 20px;
+  transition: all .3s;
+  text-transform: uppercase;
+}
+
+.teacher-text a:hover, .teacher-text a:active{
+  background: #29A9F0;
+}
+
+#about{
+  padding: 20px 45px;
+}
+
+.about-text h2{
+  color: #006CE1;
+  font-weight: 700;
+  font-size: 1.125em;
+}
+
+.about-text h1{
+  color: #403f52;
+  font-size: 2.4em;
+  line-height: 56px;
+  font-weight: 700;
+}
+
+.about-text p{
+  color: #6f7581;
+  font-size: 0.9375em;
+  line-height: 33px;
+  text-align: justify;
+  font-weight: 400;
+}
+
+.about-list{
+  list-style-type: circle;
+  padding-left: 20px;
+  color: #6f7581;
+  font-size: 0.9375em;
+  line-height: 33px;
+  font-weight: 400;
+}
+
+.about-info{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.about-school-info{
+  flex: 1 0 auto;
+  padding-right: 20px;
+}
+
+.about-info h3{
+  font-size: 1.5625em;
+  line-height: 56px;
+  font-weight: 700;
+  color: #006CE1;
+}
+
+.about-info p{
+  font-weight: 700;
+  font-size: 0.875em;
+  color: #6f7581;
+
+}
+
+.about-text a{
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 40px;
+  font-size: 0.8125em;
+  background-color: #006CE1;
+  padding: 10px 20px;
+  border-radius: 20px;
+  transition: all .3s;
+  text-transform: uppercase;
+  
+}
+
+.about-text a:hover, .about-text a:active{
+  background: #ffffFF;
+  color: #006CE1;
+  border:2px solid #006CE1;
+}
+
+.student-counter::before{
+  counter-reset: count 0;
+  content: counter(count);
+  animation: student-counter 2s ease 1s forwards;
+  -moz-animation:  student-counter 2s ease 1s forwards;
+  -o-animation:  student-counter 2s ease 1s forwards;
+  -webkit-animation:  student-counter 2s ease 1s forwards;
+}
+
+@keyframes student-counter {
+  0% {
+    counter-increment: count 0;
+  }
+  5% {
+    counter-increment: count 55;
+  }
+  10% {
+    counter-increment: count 100;
+  }
+  20% {
+    counter-increment: count 200;
+  }
+  30% {
+    counter-increment: count 1000;
+  }
+  40% {
+    counter-increment: count 1245;
+  }
+  50% {
+    counter-increment: count 2456;
+  }
+  60% {
+    counter-increment: count 3000;
+  }
+  70% {
+    counter-increment: count 3550;
+  }
+  8% {
+    counter-increment: count 3755;
+  }
+  100% {
+    counter-increment: count 4000;
+  }
+
+}
+
+.teacher-counter::before{
+  counter-reset: teacher-population 0;
+  content: counter(teacher-population);
+  animation: teacher-counter 2s ease 1s forwards;
+  -webkit-animation: teacher-counter 2s ease 1s forwards;
+  -moz-animation: teacher-counter 2s ease 1s forwards;
+  -o-animation: teacher-counter 2s ease 1s forwards;
+}
+
+@keyframes teacher-counter {
+  0% {
+    counter-increment: teacher-population 0;
+  }
+  20% {
+    counter-increment: teacher-population 22;
+  }
+  30% {
+    counter-increment: teacher-population 25;
+  }
+  60% {
+    counter-increment: teacher-population 35;
+  }
+  80% {
+    counter-increment: teacher-population 46;
+  }
+  100% {
+    counter-increment: teacher-population 65;
+  }
+}
+
+.award-counter::before{
+  counter-reset: award 0;
+  content: counter(award);
+  animation: award-counter 2s ease 1s forwards;
+  -moz-animation: award-counter 2s ease 1s forwards;
+  -o-animation: award-counter 2s ease 1s forwards;
+  -webkit-animation: award-counter 2s ease 1s forwards;
+}
+
+@keyframes award-counter {
+  0% {
+    counter-increment: award 0;
+  }
+  20% {
+    counter-increment: award 2;
+  }
+  30% {
+    counter-increment: award 5;
+  }
+  60% {
+    counter-increment: award 7;
+  }
+  80% {
+    counter-increment: award 9;
+  }
+  100% {
+    counter-increment: award 13;
+  }
+}
+
+.about-video-wrapper{
+  max-width: 500px;
+  margin: 40px 0;
+  /* padding: 1rem; */
+}
+
+.about-video-wrapper iframe{
+  max-width: 100%;
+  height:auto;
+}
+
+#why-choose-us{
+  background: #F8F8FF;
+  padding: 70px 45px;
+  /* text-align: center; */
+}
+
+.why-choose-section-title{
+  margin: 20px 0;
+  text-align: left;
+}
+
+.why-choose-section-title h1{
+  color: #006CE1;
+  font-size: 1.8125em;
+  line-height: 56px;
+  font-weight: 700;
+}
+
+.why-choose-section-title p{
+  color: #6f7581;
+  font-size: 0.875em;
+  font-weight: 600;
+  line-height: 25px;
+}
+
+.why-choose-us-image img{
+  width: 400px;
+  max-width: 400px;
+
+}
+
+.testimonial-title-wrapper{
+  text-align: center;
+}
+
+.testimonial-title{
+  color: #006CE1;
+  font-size: 1.125em;
+  font-weight: 700;
+}
+
+.testimonial-wrapper{
+  position: relative;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -30px;
+  padding: 16px;
+  color: #888;
+  font-weight: bold;
+  font-size: 1.25em;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  position: absolute;
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.testimonial-Slides{
+  display: none;
+  text-align: center;
+}
+
+.testimonial-Slides > q{
+  color: #6f7581;
+  font-size: 0.875em;
+  font-weight: 600;
+  font-style: italic;
+  line-height: 15px;
+}
+
+.author{
+  font-size: 1.75em;
+  font-weight: 700;
+  color: #006CE1;
+  line-height: 15px;
+}
+
+.job{
+  color: #6f7581;
+  font-size: 1em;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.testimonial-image{
+  margin: 20px auto;
+  display: block;
+  width: 150px;
+  height: auto;
+  max-width: 100px;
+  border-radius: 50%;
+}
+
+.dot-container{
+  text-align: center;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+
+.accordion{
+  background: #F8F8FF;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  color: #6f7581;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+}
+
+.active{
+  background-color: #006CE1;
+  color: #ffffFF;
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  color: #6f7581;
+  font-size: 1.125em;
+  font-weight: 500;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+
+}
+
+.bar1, .bar2{
+  width: 15px;
+  height: 3px;
+  background-color: #6f7581;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.bar2 {
+  -webkit-transform: rotate(-45deg) translate(-9px, -0px);
+  transform: rotate(90deg) translate(-9px, -0px);
+}
+
+.change .bar2{
+  opacity: 0;
+}
+
+.change .bar1{
+  color: #ffffFF;
+  background-color: #ffffFF;
+}
+
+#subscribed{
+ height: 70vh;
+ background-position: center;
+ background-repeat: no-repeat;
+ background-size: cover;
+ background-image: url('/img/junior-class.jpg');
+ background-attachment: fixed;
+ position: relative;
+ margin-bottom: 50px;
+}
+
+.subscribed-form-wrapper{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.form-heading{
+  color: #FFFFFF;
+  font-size: 2.4em;
+  line-height: 48px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.subscribed-form input[type="email"] {
+  width: 70%;
+  padding: 0 10px;
+  line-height: 50px;
+  font-size: 0.9375em;
+  color: rgba(162, 161, 178, 0.58);
+  border: 1px solid #6f7581;
+  font-weight: 500;
+  border-radius: 5px;
+}
+
+.subscribed-form > input[type="email"]:focus{
+  border: none;
+  outline: none;
+}
+
+.subscribed-form > input[type="submit"]{
+  margin-left: 0;
+  background-color: #006CE1;
+  padding: 0 20px;
+  border: none;
+  color: #ffffFF;
+  border-radius: 5px;
+  font-size: 0.8125em;
+  font-weight: 700;
+  line-height: 50px;
+  letter-spacing: 1px;
+  transition: all .5;
+  text-transform: uppercase;
+}
+
+.subscribed-form > input[type="submit"]:hover{
+  background-color: #7268FF;
+}
+
+
+footer{
+  padding: 70px 45px 10px;
+  background-color: #7268FF;
+}
+
+#partial-footer{
+  padding: 10px 45px;
+  background-color: #006CE1;
+  color: #ffffFF;
+}
+
+.school-footer-info, .school-footer-contact, .school-footer-quick-links, .school-footer-teacher{
+  margin: 20px 0;
+}
+
+footer h2{
+font-size: 1.25em;
+  color: #ffffFF;
+  font-weight: 700;
+}
+
+.footer a{
+  text-align: none;
+  color: #ffffFF;
+  font-size: 0.9375em;
+  cursor: pointer;
+}
+
+.school-footer-info p{
+  color: #ffffFF;
+  font-size: 1.125em;
+  font-weight: 600;
+}
+
+.school-footer-teacher > p, .school-footer-quick-link > p, .school-footer-contact > p{
+  color: #ffffFF;
+  font-weight: 400;
+  font-size: 0.9375em;
+}
+
+.footer-social-media a{
+  text-align: none;
+  color: #ffffFF;
+  font-size: 1.25em;
+  cursor: pointer;
+  text-decoration: none;
+  margin-right: 5px;
+  line-height: 25px;
+}
+
+.school-footer-teacher > ul, .school-footer-quick-links > ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.school-footer-teacher > ul > li > a, .school-footer-quick-links > ul > li > a, .school-footer-contact > a{
+  text-align: none;
+  color: #ffffFF;
+  font-size: 0.9375em;
+  cursor: pointer;
+  text-decoration: none;
+  margin-right: 5px;
+  line-height: 30px;
+}
+
+.copyrite{
+  text-align: center;
+}
+.copyrite small{
+  color: #ffffFF;
+  font-size: 14;
+  font-weight: 700;
+  line-height: 45px;
+}
+
+
+
+
+
+/*---------------------------------------- REGISTRATION AND LOGIN PAGE CSS STYLE---------------------------------------- */
+#login-main{
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0 30px;
+}
+#login-page{
+  /* margin: 150px auto 40px; */
+  width: 40%;
+  padding: 20px 20px 0px;
+  border-radius: 10px;
+  background: #ffffFF;
+}
+
+#register-main{
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 80px 0 30px;
+}
+#register-page{
+  /* margin: 150px auto 40px; */
+  width: 40%;
+  padding: 20px 20px 0px;
+  border-radius: 10px;
+  background: #ffffFF;
+}
+
+#login-page h2, #register-page h2{
+  color: #403f52;
+  font-weight: 700;
+  font-size: 2.4em;
+  line-height: 48px;
+}
+
+
+
+.register-form input[type="text"],
+.register-form input[type="email"], 
+.register-form input[type="password"]{
+  width: 100%;
+  padding: 5px;
+  font-size: 0.9375em;
+  color: #403f52;
+  font-weight: 400;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  border: 1px solid #717171;
+  background: #F8F8FF;
+}
+
+.register-form input[type="text"]:focus,
+.register-form input[type="email"]:focus, 
+.register-form input[type="password"]:focus{
+  outline-color: rgba(64, 51, 255, 0.5);
+  outline-width: 1px;
+  border-radius: 10px;
+}
+
+.register-form label{
+  color: #403f52;
+  font-size: 0.9375em;
+  font-weight: 400;
+}
+
+.password-direction{
+  color: #403f52;
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: 400;
+}
+
+.register-form input[type="submit"]{
+  color: var(--white);
+  font-weight: 700;
+  line-height: 40px;
+  font-size: 0.8125em;
+  background-color: #006CE1;
+  padding: 5px 30px;
+  border-radius: 10px;
+  margin: 10px 0;
+  border: none;
+}
+
+.register-form input[type="submit"]:hover, .register-form input[type="submit"]:active{
+  background: #4ad8f8;
+  border-style: none;
+  outline: none;
+}
+
+
+.signin-register{
+  text-align: center;
+  margin: 20px 0;
+  color: #9e9cc2;
+  font-size: 18px;
+  line-height: 25px;
+  font-weight: 400;
+}
+
+.signin-register a{
+  text-decoration: none;
+  color: #006CE1;
+  transition: all .5s;
+}
+
+.signin-register a:hover{
+  color: #4033FF;
+  text-decoration: underline;
+}
+
+label > span{
+  color: #d80d6c;
+}
+
+
+/* ----------------------------------------------ABOUT PAGE CSS STYLE--------------------------------------------------------------- */
+
+#about-page{
+  background: #ffffFF;
+  margin-top: 75px;
+  
+}
+.about-us{
+  padding: 0 45px 45px;
+}
+
+.about-us-section{
+  text-align: justify;
+}
+
+.title-margin{
+  margin-top: 50px;
+}
+
+.about-us-info > h1, .our-story-info > h1, .our-mission-info > h1{
+  font-weight: 600;
+  color: #403f52;
+  font-size: 1.875em;
+  line-height: 48px;
+}
+
+.about-us-info > p,
+.our-story-info > p, 
+.info-sub-paragraph, 
+.mission-sub-paragraph, 
+.our-mission-info > p{
+  color: #6f7581;
+  font-size: 0.9375em;
+  line-height: 33px;
+  font-weight: 400;
+  text-align: justify;
+}
+
+.about-class-explore{
+  text-align: center;
+  margin: 30px 0;
+}
+
+.about-class-explore > h1{
+  font-weight: 600;
+  color: #403f52;
+  font-size: 1.875em;
+  line-height: 48px;
+ 
+}
+
+.about-class-explore > h1:after{
+  content: '';
+  display: block;
+  width: 50px;
+  height: 5px;
+  background: #4033FF;
+  margin: 0 auto;
+}
+
+.school-images{
+  background: url('/img/primary-class.jpg');
+  background-size: contain;
+  background-position: center;
+
+  height: 50vh;
+  max-width: 100%;
+  position: relative;
+  animation: about-image-animation 10s ease-in 2s infinite;
+}
+
+@keyframes about-image-animation{
+  0%{
+    background: url('/img/junior-class.jpg');
+    background-size: contain;
+    background-position: center;
+  }
+  25%{
+    background: url('/img/class-interior.jpg');
+    background-size: contain;
+    background-position: center;
+  }
+  50%{
+    background: url('/img/primary-class.jpg');
+    background-size: contain;
+    background-position: center;
+  }
+  75%{
+    background: url('/img/student-in-lab.jpg');
+    background-size: contain;
+    background-position: center;
+  }
+  100%{
+    background: url('/img/lady-in-lab.jpg');
+    background-size: contain;
+    background-position: center;
+  }
+}
+
+.our-mission{
+  padding: 80px 45px;
+}
+
+#real-fact-about-school{
+  background: #4033FF;
+  padding: 60px 45px;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.real-fact-info > h1{
+  font-weight: 600;
+  font-size: 1.875em;
+  line-height: 48px;
+}
+
+.real-fact-info > p{
+  color: #b4cdff;
+  font-size: 0.9375em;
+  text-align: justify;
+  line-height: 33px;
+  font-weight: 400;
+}
+
+.fact-wrapper{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.fact{
+  flex: 1 0 auto;
+  margin: 10px;
+}
+
+.fact h3{
+  font-weight: 500;
+  font-size: 1.875em;
+  line-height: 48px;
+}
+
+.fact > p{
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.student-fact::before{
+  counter-reset: student-fact-count 0;
+  content: counter(student-fact-count);
+  animation: student-fact 3s ease 1s forwards;
+  -moz-animation:  student-fact 3s ease 1s forwards;
+  -o-animation:  student-fact 3s ease 1s forwards;
+  -webkit-animation:  student-fact 3s ease 1s forwards;
+}
+
+@keyframes student-fact {
+  0% {
+    counter-increment: student-fact-count 0;
+  }
+  5% {
+    counter-increment: student-fact-count 55;
+  }
+  10% {
+    counter-increment: student-fact-count 100;
+  }
+  20% {
+    counter-increment: student-fact-count 200;
+  }
+  30% {
+    counter-increment: student-fact-count 1000;
+  }
+  40% {
+    counter-increment: student-fact-count 1245;
+  }
+  50% {
+    counter-increment: student-fact-count 2456;
+  }
+  60% {
+    counter-increment: student-fact-count 3000;
+  }
+  70% {
+    counter-increment: student-fact-count 3550;
+  }
+  8% {
+    counter-increment: student-fact-count 3755;
+  }
+  100% {
+    counter-increment: student-fact-count 4000;
+  }
+
+}
+
+.teacher-fact::before{
+  counter-reset: teacher-fact-count 0;
+  content: counter(teacher-fact-count);
+  animation: teacher-fact 3s ease 1s forwards;
+  -moz-animation:  teacher-fact 3s ease 1s forwards;
+  -o-animation: teacher-fact 3s ease 1s forwards;
+  -webkit-animation:  teacher-fact 3s ease 1s forwards;
+}
+
+@keyframes teacher-fact {
+  0% {
+    counter-increment: teacher-fact-count 0;
+  }
+  20% {
+    counter-increment: teacher-fact-count 22;
+  }
+  30% {
+    counter-increment: teacher-fact-count 25;
+  }
+  60% {
+    counter-increment: teacher-fact-count 35;
+  }
+  80% {
+    counter-increment: teacher-fact-count 46;
+  }
+  100% {
+    counter-increment: teacher-fact-count 65;
+  }
+}
+
+.award-fact::before{
+  counter-reset: award-fact-count 0;
+  content: counter(award-fact-count);
+  animation: award-fact 3s ease 1s forwards;
+  -moz-animation:  award-fact 3s ease 1s forwards;
+  -o-animation:  award-fact 3s ease 1s forwards;
+  -webkit-animation:  award-fact 3s ease 1s forwards;
+}
+
+@keyframes  award-fact {
+  0% {
+    counter-increment: award-fact-count 0;
+  }
+  20% {
+    counter-increment: award-fact-count 2;
+  }
+  30% {
+    counter-increment: award-fact-count 5;
+  }
+  60% {
+    counter-increment: award-fact-count 7;
+  }
+  80% {
+    counter-increment: award-fact-count 9;
+  }
+  100% {
+    counter-increment: award-fact-count 13;
+  }
+}
+
+.building-fact::before{
+  counter-reset: building-fact-count 0;
+  content: counter(building-fact-count);
+  animation: building-fact 3s ease 1s forwards;
+  -moz-animation: building-fact 3s ease 1s forwards;
+  -o-animation: building-fact 3s ease 1s forwards;
+  -webkit-animation: building-fact 3s ease 1s forwards;
+}
+
+@keyframes building-fact {
+  0% {
+    counter-increment: building-fact-count 0;
+  }
+  20% {
+    counter-increment: building-fact-count 2;
+  }
+  30% {
+    counter-increment: building-fact-count 3;
+  }
+  60% {
+    counter-increment: building-fact-count 5;
+  }
+  80% {
+    counter-increment: building-fact-count 7;
+  }
+  100% {
+    counter-increment: building-fact-count 10;
+  }
+}
+
+#competition-visit{
+  padding: 60px 45px;
+}
+
+.competition-card{
+  width: 500px;
+  margin-bottom: 50px;
+  padding: 20px 0;
+  box-shadow: 5px 5px 6px #eeeef5, -5px -5px 6px #e7e7ee;
+  border-radius: 10px;
+}
+
+.inner-card-header, .competition-card-footer{
+  padding: 10px;
+}
+
+.inner-card-header > h2{
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+  color: #232323;
+
+}
+
+.competition-card-body > img{
+  width: 100%;
+  height: 200px;
+}
+
+.competition-card-footer p{
+  color: #403f52;
+  font-size: 0.9375em;
+  font-weight: 400;
+  line-height: 25px;
+}
+
+.competition-card-footer h3{
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 20px;
+  color: #232323;
+
+}
+
+#ready-to-register{
+  background: #4033FF;
+  color: #ffffFF;
+  padding: 60px 45px;
+}
+
+.ready-wrapper{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ready-info h3 {
+  color: var(--white);
+  font-weight: 700;
+  font-size: 2em;
+  line-height: 48px;
+}
+
+.ready-info p {
+  color: #b4cdff;
+  font-size: 0.9375em;
+  font-weight: 400;
+}
+
+.ready-button{
+  background: #68E1FD;
+  padding: 15px 30px;
+  color: #ffffFF;
+  text-decoration: none;
+  border-radius: 10px;
+  display: block;
+}
+
+.ready-button:hover{
+  text-decoration: none;
+  background: #29A9F0;
+  color: #ffffFF;
+}
+
+
+
+/* -------------------------------------------------ADMISSION PAGE CSS STYLE----------------------------------------------------------- */
+.admission-wrapper{
+  padding: 0 45px 45px;
+}
+#admission-page{
+  margin-top: 75px;
+  background: #ffffFF;
+}
+
+.school-image-top{
+  background: url('/img/school-front.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 50vh;
+  position: relative;
+}
+
+.admission-procedure > h1, .online-admission > h1{
+  font-weight: 600;
+  color: #403f52;
+  font-size: 1.875em;
+  line-height: 48px;
+  margin-top: 40px;
+}
+
+.admisson-step > li, .online-admission > p, .online-admission-procedure > li{
+  line-height: 40px;
+  color: #6f7581;
+  font-size: 0.9375em;
+  font-weight: 500;
+}
+
+.admission-requirement > li:before, .online-admission-procedure > li:before{
+  content: "\2713\0020";
+  color: #4033FF;
+  width: 10px;
+  font-weight: 700;
+  margin-right: 2px;
+}
+
+.notice{
+  text-align: justify;
+}
+
+.block-button{
+  margin-top: 50px;
+  display: block;
+  width: 100%;
+  padding: 15px;
+  text-align: center;
+  background: #4033FF;
+  color: #ffffFF;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: all .5s;
+  font-weight: 500;
+  border-bottom: 7px solid #2118a0;
+}
+
+.block-button:hover, .block-button:hover:active{
+  text-decoration: none;  
+  color: #ffffFF;  
+  border-bottom: 3px solid #2118a0;
+}
+
+
+
+/* -------------------------------------------------------BOARDING PAGE CSS STYLE-------------------------------------------------- */
+#boarding-page{
+  background: #ffffFF;
+  margin-top: 75px;
+}
+
+.boarding-image-top{
+  background: url('/img/.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  max-width: 100%;
+  overflow-x: hidden;
+  height: 50vh;
+  position: relative;
+}
+
+#boarding-wrapper{
+  padding: 0 45px 45px;
+}
+
+
+.boarding-principal-wrapper{
+  margin-top: 50px;
+}
+
+.boarding-principal{
+  text-align: center;
+}
+
+
+.boarding-principal > img{
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.boarding-principal h3{
+  font-weight: 700;
+  color: #4033FF;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.boarding-principal p{
+  color: #232323;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.boarding-principal-speech  > P{
+  line-height: 30px;
+  color: #6f7581;
+  font-size: 0.9375em;
+  font-weight: 400;
+  text-align: justify;
+}
+
+.bording-button{
+  margin: 30px 0;
+  text-align: center;
+}
+
+.bording-button > a{
+  background: #4033FF;
+  color: #ffffFF;
+  padding: 15px 30px;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 10px;
+}
+
+.bording-button > a:hover, .bording-button > a:active{
+  background: #238da5;
+}
+
+#boarding-room{
+  padding: 0 45px;
+}
+
+.boarding-img-wrapper{
+  padding: 30px 0;
+}
+
+.boarding-img-wrapper >img{
+  max-width: 600px;
+  border-radius: 10px;
+}
+
+#why-choose-boarding{
+  padding: 30px 45px;
+  text-align: center;
+}
+
+#why-choose-boarding > h1, .boarding-experience > h1{
+  color: #006CE1;
+  font-weight: 700;
+  font-size: 1.875em;
+  line-height: 45px;
+}
+
+#why-choose-boarding > p, .boarding-experience > p{
+  text-align: justify;
+  color: #6f7581;
+  font-size: 0.9375em;
+  line-height: 35px;
+  font-weight: 400;
+}
+
+#boarding-accordion-wrapper{
+  padding: 30px 45px;
+}
+
+.boarding-accordion{
+  background: #ffffFF;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border-width: 1px 1px 0;
+  border-color: #006CE1;
+  border-style: solid;
+  outline: none;
+  transition: 0.4s;
+  color: #6f7581;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.active{
+  border: none;
+}
+
+.accordion-panel {
+  padding: 0 18px;
+  background-color:#ffffFF;
+  color: #6f7581;
+  font-size: 1.125em;
+  font-weight: 500;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  border: 1px solid #006CE1;
+
+}
+
+.accordion-bar1, .accordion-bar2{
+  width: 15px;
+  height: 3px;
+  background-color: #6f7581;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.accordion-bar1{
+  transform: translate(-6px, 5px);
+}
+
+.accordion-bar2 {
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg) translate(4px, -6px);
+}
+
+.change .accordion-bar2{
+  opacity: 0;
+}
+
+.border.accordion-panel{
+  border: 1px solid #006CE1;
+}
+
+
+#boarding-experience-wrapper{
+  padding: 30px 45px;
+  text-align: center;
+}
+
+
+/* ---------------------------------------Curriculum page style--------------------------------------------------------------- */
+
+/* ------------------creche------------------ */
+
+#curriculum-page{
+  margin-top: 75px;
+  background: #ffffFF;
+}
+
+.creche-wrapper{
+  padding: 40px 45px;
+}
+
+.curriculum-image-top{
+  background: url('/img/boarding-house.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 50vh;
+  position: relative;
+}
+
+.first-image-animation{
+  max-width: 400px;
+  margin: 20px 0;
+}
+
+.slide{
+  max-width: 100%;
+  /* border: 5px solid #ececf2; */
+}
+
+.curriculum-info > h1{
+  font-weight: 600;
+  color: #403f52;
+  font-size: 1.875em;
+  line-height: 48px;
+}
+
+.curriculum-info > h2{
+  font-weight: 700;
+  color: #403f52;
+  font-size: 1.5625em;
+  line-height: 48px;
+}
+
+
+.curriculum-info > p{
+  /* line-height: 30px; */
+  color: #6f7581;
+  font-size: 0.9375em;
+  font-weight: 400;
+  text-align: justify;
+  
+}
+
+
+/* ------------early years--------- */
+
+.nursery-curriculum{
+  text-align: center;
+}
+
+.nursery-wrapper{
+  padding: 40px 45px;
+}
+
+.nursery-curriculum > p {
+  font-weight: 600;
+  color: #6f7581;
+  font-size: 0.9375em;
+}
+.nursery-image-wrapper{
+  max-width: 400px;
+  margin: 20px 0;
+}
+
+.nursery-image-wrapper > img{
+  max-width: 100%;
+}
+
+.slide2{
+  max-width: 100%;
+  /* border: 5px solid #ececf2; */
+}
+
+/* ----------------------------primary page style----------------------- */
+.primary-wrapper{
+  padding: 40px 45px;
+}
+
+.primary-title{
+  text-align: center;
+}
+.primary-title > h1 , .primary-organizaztion, .primary-info >h2{
+  font-weight: 700;
+  color: #403f52;
+  font-size: 1.25em;
+  line-height: 25px;
+}
+.primary-container{
+  padding: 20px 0;
+}
+
+.primary-slide-1, .primary-slide-2{
+  max-width: 600px;
+}
+
+.primary-slide-1 >img, .primary-slide-2 >img{
+  max-width: 100%;
+  box-shadow: 1px 1px 3px #4033FF, -1px -1px 3px #4033FF ;
+}
+
+.dot-wrapper{
+  text-align: center;
+  margin-top: 10px;
+}
+
+.primary-dot, .primary-dot-2 {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.primary-info{
+  text-align: left;
+}
+
+.primary-info p{
+  color: #6f7581;
+  font-size: 0.9375em;
+  font-weight: 400;
+  text-align: justify;
+}
+
+.primary-info-subheading{
+  margin-bottom: 20px;
+}
+.primary-info-subheading:after{
+  content: '';
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: #6f7581;
+  margin: 20px 0;
+
+}
+
+
+/* ------------------------secondary page css style--------------- */
+#secondary-page{
+  padding: 40px 45px;
+}
+
+.principal-speech-wrapper >h1, .secondary-curriculum-wrapper > h1{
+  font-weight: 700;
+  color: #403f52;
+  font-size: 1.25em;
+  line-height: 25px;
+}
+
+.principal-speech-wrapper >p, .secondary-curriculum-wrapper > p{
+  color: #6f7581;
+  font-size: 0.9375em;
+  font-weight: 400;
+  text-align: justify;
+}
+
+.slide-wrapper{
+  margin-bottom: 40px;
+}
+
+
+.secondary-slide{
+  max-width: 450px;
+}
+
+.secondary-slide >img{
+  max-width: 100%;
+  border: 5px solid #e6e4e4;
+}
+
+.secondary-card-info{
+  background: #0e8ba7;
+  padding: 20px;
+  color: #ffffFF;
+  text-align: center;
+}
+
+.secondary-card-info >h3{
+  font-weight: 700;
+  font-size: 1.25em;
+  line-height: 45px;
+}
+
+.secondary-card-info > p {
+  color: #b4cdff;
+  line-height: 20px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.admission-office > p{
+  font-size: 0.9375em;
+  font-weight: 400;
+  line-height: 10px;
+}
+
+.admission-office > p:first-child{
+  color: #b4cdff;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+
+.admission-contact > a{
+  text-decoration: none;
+  cursor: pointer;
+  color: #ffffFF;
+  font-size: 0.9375em;
+  font-weight: 400;
+  display: block;
+}
+
+
+/* -------------------------------------------------------------contact page css style----------------------------------------------- */
+#contact-page{
+  margin-top: 75px;
+}
+
+.contact-wrapper{
+  padding: 40px 45px;
+}
+
+.form-contact-form-wrapper{
+  box-shadow: 0.5px 0.5px 5px #71a7e1, -0.5px -0.5px 5px #76a4d5;
+  padding: 40px 20px;
+  margin-bottom: 40px;
+}
+
+#contact-form > label{
+  /* display: block; */
+  color: #403f52;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+#contact-form > input[type="text"], input[type="email"], textarea{
+  width: 100%;
+  margin-bottom: 5px;
+  padding: 4px;
+  color: #403f52;
+  outline: none;
+  border: 1px solid #d8d7e2;
+}
+
+#contact-form > input[type="submit"]{
+  padding: 10px 15px;
+  color: #ffffFF;
+  background: #4033FF;
+  border: none;
+}
+
+#contact-form > input[type="submit"]:hover{
+  border: 2px solid #403f52;
+}
+
+#contact-form > input[type="text"]:focus, input[type="email"]:focus{
+  box-shadow: 0.7px 0.7px 3px #c6cace, -0.7px -0.7px 3px #c6cace;
+
+}
+
+.contact-info >h1{
+  font-weight: 700;
+  color: #403f52;
+  font-size: 1.25em;
+  line-height: 25px;
+}
+
+.contact-info > a, .contact-info > p{
+  display: block;
+  line-height: 33px;
+  text-decoration: none;
+  color: #6f7581;
+  font-size: 0.9375em;
+  font-weight: 600;
+  line-height: 35px;
+
+}
+
+i.fas, i.far{
+  margin-right: 5px;
+}
+
+
+/* -----------------------Student registration onboading home page css style------------------------------------------- */
+
+#student-register{
+  background-color: #4033FF;
+  padding: 100px 0;
+  height: 100%;
+}
+
+.register-wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .register-container{
+  
+} */
+#onboard{
+  background-color: #4033FF;
+  padding: 200px 30px 0;
+  height: 100%;
+}
+
+.onboard-wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.welcome-message{
+  text-align: center;
+  width: 600px;
+}
+
+.welcome-message > h1{
+  color: #ffffFF;
+  font-weight: 700;
+  font-size: 2.4em;
+  line-height: 56px;
+}
+
+.welcome-message > p {
+  color: #b4cdff;
+  font-size: 1.125em;
+  line-height: 25px;
+  font-weight: 500;
+}
+
+.proceed-button{
+  margin-top: 40px;
+}
+
+
+
+.proceed-button > a{
+  background: #ffffFF;
+  color: #0e8ba7;
+  padding: 10px 15px;
+  border-radius: 2px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all .3s;
+}
+
+.proceed-button > a:hover{
+  font-weight: 700;
+}
+
+.register-container .form-progress{
+  display: flex;
+  margin: 20px 0;
+}
+
+.register-container .form-progress .progress-step{
+  text-align: center;
+  position: relative;
+  width: 100%;
+}
+
+.form-progress .progress-step:last-child .bullet:before,
+.form-progress .progress-step:last-child .bullet:after{
+  display: none;
+}
+
+.register-container .form-progress .bullet:after,
+.register-container .form-progress .bullet:before{
+  position: absolute;
+  content: '';
+  height: 3px;
+  bottom: 11px;
+  right: -21px;
+  width: 44px;
+  /* background: #262626; */
+}
+
+.register-container .form-progress .bullet{
+  height: 25px;
+  width: 25px;
+  border: 2px solid #000;
+  display: inline-block;
+  border-radius: 50%;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 25px;
+}
+
+.form-progress .progress-step .bullet:after{
+  background: #4033FF;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: animate-bar 0.3s linear forwards;
+}
+
+@keyframes animate-bar {
+  100%{
+    transform: scaleX(1);
+  }
+}
+
+.register-container .form-progress span{
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 25px;
+}
+
+.bullet.active{
+  background: #006CE1;
+}
+
+
+/* -----------------------------student registration css style-------------------------------------------------------------- */
+
+#student-register{
+  margin-top: 75px;
+  /* padding: 75px 20px; */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #4033FF;
+ 
+}
+
+
+.register-container{
+  background: #ffffFF;
+  width: 450px;
+  padding: 40px;
+  border-radius: 10px;
+}
+
+
+.register-container > h1{
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 33px;
+  color: #4033FF;
+  text-align: center;
+  /* margin-bottom: 40px; */
+}
+
+
+.form-outer form .reg-title{
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 33px;
+  color: #403f52;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+
+.form-outer form  label{
+  display: block;
+  font-size: 14px;
+  color: #403f52;
+  font-weight: 400;
+}
+
+
+.form-outer form input[type="text"],
+.form-outer form input[type="email"],
+.form-outer form input[type="number"],
+.form-outer form input[type="date"],
+.form-outer form input[type="file"],
+.form-outer form select,
+.form-outer form textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 5px 10px;
+  max-height: 100%;
+  font-size: 17px;
+}
+
+.form-outer form input[type="text"]:focus,
+.form-outer form input[type="email"]:focus,
+.form-outer form input[type="number"]:focus,
+.form-outer form input[type="date"]:focus,
+.form-outer form input[type="file"]:focus,
+.form-outer form select:active {
+  outline-color: rgba(64, 51, 255, 0.5);
+}
+
+input.invalid{
+  background: #ffdddd;
+}
+
+.page{
+  display: none;
+}
+
+.button-wrapper{
+  overflow: auto;
+}
+
+.buttons{
+  float: right;
+  margin-top: 20px;
+}
+
+
+.buttons button{
+  background: #4033FF;
+  font-weight: 500;
+  font-size: 14px;
+  color: #ffffFF;
+  padding: 10px 15px;
+  border: none;
+
+}
+
+#loader-wrapper{
+  text-align: center;
+  margin: 20px auto;
+  display: none;
+  position: relative;
+}
+
+.loader-text{
+  font-weight: 500;
+  font-size: 18px;
+  color: #4033FF;
+}
+
+
+#loader{
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid #4033FF;
+  border-bottom: 16px solid #4033FF;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  margin-bottom: 50px;
+  margin: auto;
+  animation: spin 2s linear infinite;
+}
+
+
+@keyframes spin {
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+
+.progress-step.active{
+  background: #71a7e1;
+}
+
+
+
+/* --------------------------------------------------------MEDIA QUERY CSS STYLE-------------------------------------------------------- */
+@media only screen and (max-width:1024px){
+  body {
+    overflow-x: hidden;
+    font-size: 20px;
+  }
+  .nav-wrapper{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 75px;
+    right: 0;
+    align-items: center;
+    width: 100%;
+    height: 50vh;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+    opacity: 0;
+    background: #232323;
+  }
+
+  a.login{
+    border: none;
+    padding: 0;
+    border-radius: 0;
+    margin-left: 0;
+    padding-bottom: 20px;
+  }
+
+  .nav-list{
+    opacity: 0;
+    border-bottom: 1px solid #6f7581;
+    width: 100%;
+  }
+
+  .hambug{
+    display: block;
+  }
+  
+  .info-text{
+    padding: 40px 20px 20px;
+  }
+  
+  .info-image{
+    padding:40px 20px 20px;
+  }
+  
+  .info-image img, .explore-image img{
+    max-width:300px;
+    height: auto;
+  }
+
+
+  #admission, #explore-teacher{
+    padding: 40px 30px;
+  }
+  
+  #why-choose-us{
+    background: #F8F8FF;
+    padding: 40px 30px;
+  }
+
+  /* subscription form */
+  .subscribed-form input[type="email"] {
+    width: 100%;
+    margin-bottom: 20px;
+    
+  }
+
+  /* login page style */
+  #login-page, #register-page{
+    width: 80%;
+  }
+
+
+  /* about page */
+  .about-us{
+    padding: 20px 30px 45px;
+  }
+
+  .ready-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  #ready-to-register{
+    background: #4033FF;
+    color: #ffffFF;
+    padding: 60px 30px;
+  }
+
+  .our-mission{
+    padding: 60px 30px;
+  }
+
+  /* ---------admission page css style--------------------------------------- */
+
+  .admission-wrapper{
+    padding: 0 30px 45px;
+  }
+  #admission-page{
+    background: #ffffFF;
+  }
+  .school-image-top{
+    max-height: 20vh;
+    padding: 0 30px;
+  }
+
+  /* --------------------------------------boarding page css style---------------------------------- */
+  .boarding-image-top{
+    max-height: 20vh;
+    padding: 0 30px;
+  }
+
+  .boarding-img-wrapper >img{
+    max-width: 400px;
+  }
+
+
+  #boarding-wrapper{
+    padding: 0 30px 45px;
+  }
+  #boarding-room{
+    padding: 0 30px;
+  }
+  #why-choose-boarding, #boarding-experience-wrapper, #boarding-accordion-wrapper{
+    padding: 30px 30px;
+  }
+
+  #secondary-page{
+    padding: 40px 30px;
+  }
+
+  .contact-wrapper{
+    padding: 40px 30px;
+  }
+}
+
+
+
+@media only screen and (max-width:978px){
+  body {
+    overflow-x: hidden;
+    font-size: 1.15em;
+  }
+  .nav-wrapper{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 75px;
+    right: 0;
+    align-items: center;
+    width: 100%;
+    height: 50vh;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+    opacity: 0;
+    background: #232323;
+  }
+
+  a.login{
+    border: none;
+    padding: 0;
+    border-radius: 0;
+    margin-left: 0;
+    padding-bottom: 20px;
+  }
+
+  .nav-list{
+    opacity: 0;
+    border-bottom: 1px solid #6f7581;
+    width: 100%;
+  }
+
+  .nav-list a{
+    line-height: 20px;
+  }
+
+  .hambug{
+    display: block;
+  }
+  
+  /* .info-text{
+    padding: 20px;
+  } */
+
+
+  .info-text-wrapper{
+    padding: 60px 30px 30px;
+  }
+  
+  
+  .info-image{
+    padding:20px;
+  }
+  
+  .info-image img, .explore-image img{
+    max-width:300px;
+    height: auto;
+  }
+
+
+  #admission, #explore-teacher{
+    padding: 50px 30px;
+  }
+  
+  #why-choose-us{
+    background: #F8F8FF;
+    padding: 50px 30px;
+  }
+
+  /* subscription form */
+  .subscribed-form input[type="email"] {
+    width: 100%;
+    margin-bottom: 20px;
+    
+  }
+
+  /* login page style */
+  #login-page, #register-page{
+    width: 80%;
+  }
+
+  /* about page */
+  .about-us{
+    padding: 0 30px 45px;
+  }
+
+  .ready-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  #ready-to-register{
+    background: #4033FF;
+    color: #ffffFF;
+    padding: 60px 30px;
+  }
+
+  .our-mission{
+    padding: 60px 30px;
+  }
+
+  /* ---------admission page css style--------------------------------------- */
+
+  .admission-wrapper{
+    padding: 0 30px 45px;
+  }
+  #admission-page{
+    background: #ffffFF;
+  }
+  .school-image-top{
+    max-height: 30vh;
+    padding: 0 30px;
+  }
+
+  /* --------------------------------------boarding page css style---------------------------------- */
+  .boarding-image-top{
+    max-height: 30vh;
+    padding: 0 30px;
+  }
+
+  .boarding-img-wrapper >img{
+    max-width: 400px;
+  }
+
+
+  #boarding-wrapper{
+    padding: 0 30px 45px ;
+  }
+  #boarding-room{
+    padding: 0 30px;
+  }
+  #why-choose-boarding, #boarding-experience-wrapper, #boarding-accordion-wrapper{
+    padding: 30px 30px;
+  }
+
+
+  #secondary-page{
+    padding: 40px 30px;
+  }
+
+  .contact-wrapper{
+    padding: 40px 30px;
+  }
+}
+
+@media only screen and (max-width:855px){
+  body {
+    overflow-x: hidden;
+    font-size: 18px;
+  }
+
+  .nav-wrapper{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 75px;
+    right: 0;
+    align-items: center;
+    width: 100%;
+    height: 50vh;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+    opacity: 0;
+    background: #232323;
+  }
+
+  a.login{
+    border: none;
+    padding: 0;
+    border-radius: 0;
+    margin-left: 0;
+    padding-bottom: 20px;
+  }
+
+  .nav-list{
+    opacity: 0;
+    border-bottom: 1px solid #6f7581;
+    width: 100%;
+  }
+
+  .nav-list a{
+    line-height: 20px;
+  }
+
+  .hambug{
+    display: block;
+  }
+  
+  /* .info-text{
+    padding: 20px;
+  } */
+
+  .info-text-wrapper{
+    padding: 60px 30px 30px;
+  }
+  
+  
+  .info-image{
+    padding:20px;
+  }
+  
+  .info-image img, .explore-image img{
+    max-width:300px;
+    height: auto;
+  }
+
+
+  #admission, #explore-teacher{
+    padding: 50px 30px;
+  }
+  
+  #why-choose-us{
+    background: #F8F8FF;
+    padding: 50px 30px;
+  }
+
+  /* subscription form */
+  .subscribed-form input[type="email"] {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  /* login page style */
+  #login-page, #register-page{
+    width: 100%;
+  }
+
+  .about-us{
+    padding: 0 30px 45px;
+  }
+
+  .ready-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .our-mission{
+    padding: 60px 30px;
+  }
+
+  /* ---------admission page css style--------------------------------------- */
+
+  .admission-wrapper{
+    padding: 0 30px 45px;
+  }
+  #admission-page{
+    padding: 70px 0px;
+    background: #ffffFF;
+  }
+  .school-image-top{
+    max-height: 30vh;
+    padding: 0 30px;
+  }
+
+  /* -------------------------------boarding page css style----------------------------------- */
+  .boarding-image-top{
+    max-height: 30vh;
+    padding: 0 30px;
+  }
+
+  .boarding-img-wrapper >img{
+    max-width: 300px;
+  }
+  
+  #boarding-wrapper{
+    padding: 0 30px 45px;
+  }
+  #boarding-room{
+    padding: 0 30px;
+  }
+  #why-choose-boarding, #boarding-experience-wrapper, #boarding-accordion-wrapper{
+    padding: 30px 30px;
+  }
+
+  /* curriculum css style */
+
+  #secondary-page{
+    padding: 40px 30px;
+  }
+
+  .contact-wrapper{
+    padding: 40px 30px;
+  }
+
+
+  .proceed-button{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .proceed-button > a{
+    margin-bottom: 20px;
+  }
+  
+}
+
+@media only screen and (max-width:480px){
+  body {
+    overflow-x: hidden;
+  }
+
+  .nav-wrapper{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 75px;
+    right: 0;
+    align-items: center;
+    width: 100%;
+    height: 50vh;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+    opacity: 0;
+    background: #232323;
+  }
+
+  a.login{
+    border: none;
+    padding: 0;
+    border-radius: 0;
+    margin-left: 0;
+    padding-bottom: 20px;
+  }
+
+  .nav-list{
+    opacity: 0;
+    border-bottom: 1px solid #6f7581;
+    width: 100%;
+  }
+
+  .nav-list a{
+    line-height: 20px;
+  }
+
+  .hambug{
+    display: block;
+  }
+  
+  /* .info-text{
+    padding: 20px;
+  } */
+  .info-text-wrapper{
+    padding: 60px 30px 30px;
+  
+  }
+  
+  
+  .info-image{
+    padding:20px;
+  }
+  
+  .info-image img, .explore-image img{
+    max-width:300px;
+    height: auto;
+  }
+
+
+  #admission, #explore-teacher{
+    padding: 50px 30px;
+  }
+  
+  #why-choose-us{
+    background: #F8F8FF;
+    padding: 50px 30px;
+  }
+
+  /* subscription form */
+  .subscribed-form input[type="email"] {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .info-image, .explore-image{
+    display: none;
+  }
+
+  .why-choose-section-title h1{
+    text-align: center;
+  }
+
+  /* -------------------------login page style--------------------------- */
+  #login-page{
+    width: 100%;
+  }
+
+  .about-us{
+    padding: 0 30px 45px;
+  }
+
+  .ready-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .our-mission{
+    padding: 60px 30px;
+  }
+
+  /* ---------admission page css style--------------------------------------- */
+
+  .admission-wrapper{
+    padding: 0 30px 45px;
+  }
+  #admission-page{
+    padding: 70px 0px;
+    background: #ffffFF;
+  }
+  .school-image-top{
+    max-height: 30vh;
+    padding: 0 30px;
+  }
+
+  /* ------------------------boarding page css style----------------------------- */
+  .boarding-image-top{
+    max-height: 30vh;
+    padding: 0 300px;
+  }
+  #boarding-wrapper{
+    padding: 0 30px 45px;
+  }
+  #boarding-room{
+    padding: 0 30px;
+  }
+  #why-choose-boarding, #boarding-experience-wrapper, #boarding-accordion-wrapper{
+    padding: 30px 30px;
+  }
+
+  #secondary-page{
+    padding: 40px 30px;
+  }
+
+  .proceed-button{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .proceed-button > a{
+    margin-bottom: 20px;
+  }
+  
+}
+
+@media only screen and (max-width:360px){
+  body {
+    overflow-x: hidden;
+    font-size: 1.15em;
+  }
+
+  .nav-wrapper{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 75px;
+    right: 0;
+    align-items: center;
+    width: 100%;
+    height: 50vh;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+    opacity: 0;
+    background: #232323;
+  }
+
+  a.login{
+    border: none;
+    padding: 0;
+    border-radius: 0;
+    margin-left: 0;
+    padding-bottom: 20px;
+  }
+
+  .nav-list{
+    opacity: 0;
+    border-bottom: 1px solid #6f7581;
+    width: 100%;
+  }
+
+  .nav-list a{
+    line-height: 20px;
+  }
+
+  .hambug{
+    display: block;
+  }
+  
+  /* .info-text{
+    padding: 20px;
+  } */
+
+  .info-text-wrapper{
+    padding: 60px 20px 30px;
+  
+  }
+  
+  .info-image{
+    padding:20px;
+  }
+  
+  .info-image img, .explore-image img{
+    max-width:300px;
+    height: auto;
+  }
+
+
+  #admission, #explore-teacher{
+    padding: 50px 20px;
+  }
+  
+  #why-choose-us{
+    background: #F8F8FF;
+    padding: 50px 20px;
+  }
+
+  /* subscription form */
+  .subscribed-form input[type="email"] {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .info-image, .explore-image{
+    display: none;
+  }
+
+  .why-choose-section-title h1{
+    text-align: center;
+  }
+
+  /* -------------------------login page style--------------------------- */
+  #login-page{
+    width: 100%;
+  }
+
+  .about-us{
+    padding: 0 20px 45px;
+  }
+
+  .ready-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .our-mission{
+    padding: 60px 20px;
+  }
+
+  /* ---------admission page css style--------------------------------------- */
+
+  .admission-wrapper{
+    padding: 0 20px 45px;
+  }
+  #admission-page{
+    padding: 70px 0px;
+    background: #ffffFF;
+  }
+  .school-image-top{
+    max-height: 30vh;
+    padding: 0 30px;
+  }
+
+  /* ------------------------boarding page css style----------------------------- */
+  .boarding-image-top{
+    max-height: 30vh;
+    padding: 0 300px;
+  }
+  #boarding-wrapper{
+    padding: 0 20px 30px;
+  }
+  #boarding-room{
+    padding: 0 20px;
+  }
+  #why-choose-boarding, #boarding-experience-wrapper, #boarding-accordion-wrapper{
+    padding: 30px 20px;
+  }
+
+
+  #secondary-page{
+    padding: 40px 20px;
+  }
+
+  .contact-wrapper{
+    padding: 40px 20px;
+  }
+
+
+  .proceed-button{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .proceed-button > a{
+    margin-bottom: 20px;
+  }
+  
+}
+
+
+
+
+.nav-active {
+  transform: translateX(0%);
+  opacity: 0.92;
+}
+
+@keyframes navLinksFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+
+.error{
+  display: block;
+  color: #ce4545;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.invalid{
+  background: #c98e8e !important;
+}
+
+
+/* error 404 style */
+
+.not-found-wrapper{
+  background: #000;
+  max-height: 100vh;
+}
+
+.not-found{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.not-found-text{
+  color:#ffffff;
+  margin-top: 200px;
+}
+
+.not-found-text > h1{
+  font-weight: 700;
+  font-size: 45px;
+}
+
+.not-found-text{
+  font-weight: 500;
+  font-size: 35px;
+}
+

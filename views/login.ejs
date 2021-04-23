@@ -1,0 +1,49 @@
+<%- include('layout/header') %> 
+
+<main id="login-main">
+  <div id="login-page">
+    <h2><%= title %> </h2>
+    <%if(flashMessage.length > 0){%>
+      <div class="alert alert-info alert-dismissible fade show">
+        <%= flashMessage %>
+        <button type="button" class="close" data-dismiss="alert" aria-label="close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div> 
+    <%}%>
+    <% if(message){ %> 
+      <div class="alert alert-info alert-dismissible fade show">
+        <%= message %>
+        <button type="button" class="close" data-dismiss="alert" aria-label="close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div> 
+    <% } %> 
+    <form class="register-form" action="" method="post">
+      <label for="email">Email address <span>*</span></label>
+      <input type="email" name="username" id="loginEmail" value="<%= user.username %>">
+      <%  if(error){  %>
+        <% error.forEach((error) =>{ %>
+          <%if(error.param == 'username'){%> 
+            <span class="error"><%= error.msg %> </span>
+          <%}%> 
+        <%}) %>
+      <% } %>
+      <label for="password">Password <span>*</span></label>
+      <input type="password" name="password" id="loginPassword" value="<%= user.password %>">
+      <%  if(error){  %>
+        <% error.forEach((error) =>{ %>
+          <%if(error.param == 'password'){%> 
+            <span class="error"><%= error.msg %> </span>
+          <%}%> 
+        <%}) %>
+      <% } %>
+      <input type="submit" value="Login">
+    </form>
+    <div class="signin-register">
+      <p>You have not registered? <a href="/user/register">Sign up</a></p>
+    </div>
+  </div>
+</main>
+
+<%- include('layout/footer') %> 

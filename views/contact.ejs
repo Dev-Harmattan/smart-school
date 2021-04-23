@@ -1,0 +1,42 @@
+<%- include('layout/header') %>
+
+  <main id="contact-page">
+    <div class="container-fluid px-0">
+      <div class="school-image-top">
+        <h1 class="title"><%= title %> </h1>
+      </div>
+      <div class="contact-wrapper">
+        <div class="row">
+          <div class="col-md-8">
+            <div class="form-contact-form-wrapper">
+              <form id="contact-form" action="contact" method="post">
+                <label for="senderName">Your Name(required)</label>
+                <input type="text" name="name" id="senderName">
+                <label for="senderEmail">Your Email(required)</label>
+                <input type="email" name="email" id="senderEmail">
+                <label for="senderSubject">Subject</label>
+                <input type="text" name="subject" id="senderSubject">
+                <label for="senderMessage">Your Message</label>
+                <textarea name="message" id="SenderMesage" cols="30" rows="5"></textarea>
+                <input type="submit" value="Send">
+              </form>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="contact-info">
+              <h1>Contact Info</h1>
+              <p><i class="fas fa-map-marker-alt"></i>No 23 Olugbami street Victoria Island, Lagos</p>
+              <a href="tel:08160149421"> <i class="fas fa-tty"></i>+234(0)8160149421</a>
+              <a href="tel:08160149421"> <i class="fas fa-mobile-alt"></i>+234(0)8160149421</a>
+              <a href="malto:info@smartschool.com"> <i class="far fa-envelope"></i>info@smartschool.com</a>
+              <a href="https://thesmartschool.com"><i class="fas fa-globe-africa"></i>thesmartschool.com</a>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+  <%- include('layout/footer') %>

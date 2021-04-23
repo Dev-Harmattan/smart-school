@@ -1,0 +1,35 @@
+<%- include('layout/header') %>
+  <main id="register-main">
+    <div id="register-page">
+       
+      <h2>Register</h2>
+      <form id="register" class="register-form" action="/user/register" method="post">
+        <label for="email">Email address <span>*</span></label>
+        <input type="email" name="email" id="email" value="<%= user.email %>">
+        <%  if(error){  %>
+          <% error.forEach((error) =>{ %>
+            <%if(error.param == 'email'){%> 
+              <span class="error"><%= error.msg %> </span>
+            <%}%> 
+          <%}) %>
+        <% } %>
+        <label for="password">Password <span>*</span></label>
+        <input type="password" name="password" id="password" value="<%= user.password %>">
+        <%  if(error){  %>
+          <% error.forEach((error) =>{ %>
+            <%if(error.param == 'password'){%> 
+              <span class="error"><%= error.msg %> </span>
+            <%}%> 
+          <%}) %>
+        <% } %>
+        <p class="password-direction">Make sure it's at least 15 characters OR at least 8 characters including a number
+          and a lowercase letter.
+        </p>
+        <input id="register-buton" type="submit" value="Submit">
+      </form>
+      <div class="signin-register">
+        <p>You have already registered? <a href="/user/login">Sign in</a></p>
+      </div>
+    </div>
+  </main>
+  <%- include('layout/footer') %> 

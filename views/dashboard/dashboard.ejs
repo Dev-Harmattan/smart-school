@@ -1,0 +1,13 @@
+<%- include('layout/dashboardTopBar') %>
+
+  <%if(title === 'user'){%>
+    <%- include('dashUser'); %>
+  <%} else if(title === 'userSetting'){%>
+    <%- include('dashSetting'); %>
+  <%}else{%>
+    <%- include('dashHome'); %>
+  <%}%>
+
+    <%- include('layout/dashboardSidebar') %>
+
+      <%- include('layout/dashboardFooter') %>

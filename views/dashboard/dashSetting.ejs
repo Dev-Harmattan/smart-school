@@ -1,0 +1,98 @@
+<main>
+  <div class="main-container">
+    <div class="admin-action">
+      <div class="result-post">
+        <h2 class="user-leading">Result Posting Form</h2>
+        <%if(status.length){%>
+          <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <%= status %>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div> 
+        <%}%>
+        <form action="/admin/dashboard/post/result" method="POST">
+          <label for="user">User ID</label>
+          <input type="text" name="user" id="user">
+          <label for="code">Code</label>
+          <input type="text" name="code" id="code">
+          <label for="subject">Subject</label>
+          <input type="text" name="subject" id="subject">
+          <label for="score">Score</label>
+          <input type="text" name="score" id="score">
+          <label for="over">Over</label>
+          <input type="text" name="over" id="over">
+          <label for="grade">Grade</label>
+          <input type="text" name="grade" id="grade">
+          <label for="date">Date</label>
+          <input type="date" name="date" id="date">
+          <input type="submit" value="Post Result" id="post-button">
+        </form>
+      </div>
+      <div class="student-perform-info">
+        <h2 class="user-leading">Student Performance</h2>
+        <div id="student-performance"></div>
+      </div>
+      <div class="message-post">
+        <h2 class="user-leading">News Posting Form</h2>
+        <form action="">
+          <label for="posterName">Name</label>
+          <input type="text" name="name" id="posterName">
+          <label for="postDate">Code</label>
+          <input type="date" name="date" id="postDate">
+          <label for="message"></label>
+          <textarea name="message" id="message" cols="30" rows="5"></textarea>
+          <input type="submit" value="Post Message" id="post-button">
+        </form>
+      </div>
+    </div>
+    <div class="results-table table-responsive-md">
+      <h2 class="user-leading">Students Examination Results</h2>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>User ID</th>
+            <th scope="col">Code</th>
+            <th scope="col">Subject</th>
+            <th scope="col">Grade</th>
+            <th scope="col">Score</th>
+            <th scope="col">Over</th>
+            <th scope="col">Date</th>
+            <th scope="col">Edit</th>
+            <th scope="col">Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <% for(data of result){ %> 
+              <% if(data.resultDetails){ %> 
+                <% for(res of data.resultDetails) {%> 
+                  <tr>
+                    <td><%= data.user %></td>
+                    <td scope="col"><%= res.code %></td>
+                    <td scope="col"><%= res.subject %></td>
+                    <td scope="col"><%= res.grade %></td>
+                    <td scope="col"><%= res.score %></td>
+                    <td scope="col"><%= res.over %></td>
+                    <td scope="col"><%= new Date(res.date).toLocaleDateString() %></td>
+                    <td course-id=<%= res._id%>><i class="fas fa-user-edit"></i> Edit</td>
+                    <td course-id=<%= res._id%>><i class="fas fa-user-times"></i> Delete</td>
+                  </tr>
+                <% } %> 
+              <% } %> 
+            
+          <% } %> 
+        </tbody>
+      </table>
+    </div>
+  </div>
+</main>
+
+
+<!-- user,
+    code,
+    subject,
+    grade,
+    score,
+    over,
+    date -->

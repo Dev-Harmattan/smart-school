@@ -1,0 +1,253 @@
+<main>
+  <div class="main-container">
+    <div class="user-cards-wrapper">
+      <div class="user-card background-lightblue">
+        <div class="user-card-inner">
+          <i class="fas fa-edit fa-2x"></i>
+          <span >Opening Exam</span>
+        </div>
+        <p >05</p>
+      </div>
+      <div class="user-card background-red">
+        <div class="user-card-inner">
+          <i class="fas fa-money-bill fa-2x"></i>
+          <span>Due Fees</span>
+        </div>
+        <p>$1,000</p>
+      </div>
+      <div class="user-card background-yellow">
+        <div class="user-card-inner">
+          <i class="fas fa-flag fa-2x"></i>
+          <span>Events</span>
+        </div>
+        <p>10</p>
+      </div>
+      <div class="user-card background-green">
+        <div class="user-card-inner">
+          <i class="fas fa-folder fa-2x"></i>
+          <span>Documents</span>
+        </div>
+        <p>02</p>
+      </div>
+    </div>
+
+    <div class="profile-cards">
+      <div class="profile-card-left">
+        <div class="profile-card-head">
+          <h1>My Information</h1>
+          <div class="info-icons">
+            <i class="fas fa-sync-alt text-green"></i>
+            <i class="fas fa-times icon-text-red"></i>
+          </div>
+        </div>
+        <div class="profile-card-body">
+          <div class="profile-image">
+            <img src="/img/avatar-profile.jpeg" alt="profie image">
+            <!-- <input type="file" name="edit" id="profile-picture-button"> -->
+          </div>
+          <div class="profile-info-cards">
+            <div class="profile-info">
+              <div class="profile-field-title">
+                <span>Name:</span>
+              </div>
+              <div class="profile-field-value">
+                <%if(userDetails){%>
+                  <span>
+                    <%=userDetails.firstName%>
+                      <%= userDetails.lastName %>
+                  </span>
+                  <%}else{%>
+                    <span>--</span>
+                    <%}%>
+              </div>
+            </div>
+            <div class="profile-info">
+              <div class="profile-field-title">
+                <span>Gender:</span>
+              </div>
+              <div class="profile-field-value">
+                <%if(userDetails){%>
+                  <span>
+                    <%=userDetails.gender%>
+                  </span>
+                  <%}else{%>
+                    <span>--</span>
+                    <%}%>
+              </div>
+            </div>
+            <div class="profile-info">
+              <div class="profile-field-title">
+                <span>Date Of Birth:</span>
+              </div>
+              <div class="profile-field-value">
+                <%if(userDetails){%>
+                  <span>
+                    <%=new Date(userDetails.birthDate).toLocaleDateString()%>
+                  </span>
+                  <%}else{%>
+                    <span>--</span>
+                    <%}%>
+              </div>
+            </div>
+            <div class="profile-info">
+              <div class="profile-field-title">
+                <span>Parent Occupation:</span>
+              </div>
+              <div class="profile-field-value">
+                <%if(userDetails){%>
+                  <span>
+                    <%=userDetails.parentOccupation%>
+                  </span>
+                  <%}else{%>
+                    <span>--</span>
+                    <%}%>
+              </div>
+            </div>
+            <div class="profile-info">
+              <div class="profile-field-title">
+                <span>Email:</span>
+              </div>
+              <div class="profile-field-value">
+                <%if(userDetails){%>
+                  <span>
+                    <%=userDetails.user.email%>
+                  </span>
+                  <%}else{%>
+                    <span>--</span>
+                    <%}%>
+              </div>
+            </div>
+            <div class="profile-info">
+              <div class="profile-field-title">
+                <span>Reigion:</span>
+              </div>
+              <div class="profile-field-value">
+                <span>Islam</span>
+              </div>
+            </div>
+            <div class="profile-info">
+              <div class="profile-field-title">
+                <span>Admin Date:</span>
+              </div>
+              <div class="profile-field-value">
+                <span>--/--/----</span>
+              </div>
+            </div>
+            <div class="profile-info">
+              <div class="profile-field-title">
+                <span>Class:</span>
+              </div>
+              <div class="profile-field-value">
+                <span>SS2</span>
+              </div>
+            </div>
+            <div class="profile-info">
+              <div class="profile-field-title">
+                <span>Session:</span>
+              </div>
+              <div class="profile-field-value">
+                <span>A</span>
+              </div>
+            </div>
+            <div class="profile-info">
+              <div class="profile-field-title">
+                <span>Address:</span>
+              </div>
+              <div class="profile-field-value">
+                <%if(userDetails){%>
+                  <span>
+                    <%=userDetails.residentAddress%>
+                  </span>
+                  <%}else{%>
+                    <span>--</span>
+                    <%}%>
+              </div>
+            </div>
+            <div class="profile-info">
+              <div class="profile-field-title">
+                <span>Phone:</span>
+              </div>
+              <div class="profile-field-value">
+                <span>08160149421</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="profile-card-right">
+        <div class="profile-card-head">
+          <h1>Notice Board</h1>
+          <div class="info-icons">
+            <i class="fas fa-sync-alt text-green"></i>
+            <i class="fas fa-times icon-text-red"></i>
+          </div>
+        </div>
+        <% for(info of message){ %> 
+          <div class="exam-board">
+            <p><%= new Date(info.date).toLocaleDateString() %></p>
+            <h1 class="text-lightblue"><%= info.name %></h1>
+            <span><%= info.message %></span>
+          </div>
+        <% } %> 
+      </div>
+    </div>
+
+    <div class="profile-charts-wrapper">
+      <div class="profile-chart">
+        <div class="profile-left-title">
+          <div>
+            <h1>Student Performance</h1>
+            <p>Examination Performance Infomation</p>
+          </div>
+          <i class="fas fa-chart-bar"></i>
+        </div>
+        <div id="apex2"></div>
+      </div>
+      <div class="exam-info">
+        <div class="profile-card-head">
+          <h1>Results</h1>
+          <div class="exam-search">
+            <input type="text" name="search-exam" id="">
+            <button type="submit">Search</button>
+          </div>
+          <div class="info-icons">
+            <i class="fas fa-sync-alt text-green"></i>
+            <i class="fas fa-times icon-text-red"></i>
+          </div>
+        </div>
+        <div class="exam-table table-responsive-md">
+          <table class="table table-striped table-sm ">
+            <thead>
+              <tr>
+                <th scope="col">Code</th>
+                <th scope="col">Subject</th>
+                <th scope="col">Grade</th>
+                <th scope="col">Score</th>
+                <th scope="col">Over</th>
+                <th scope="col">Date</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% if(result) {%>
+                <% for(let data of result) {%>
+                  <tr>
+                    <td><%= data.code %> </td>
+                    <td><%= data.subject %></td>
+                    <td><%= data.grade %></td>
+                    <td><%= data.score %></td>
+                    <td><%= data.over %></td>
+                    <td><%= new Date(data.date).toLocaleDateString() %></td>
+                  </tr>
+                <%}%>
+              <% } %> 
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+

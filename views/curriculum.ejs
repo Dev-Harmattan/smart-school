@@ -1,0 +1,22 @@
+<%- include('layout/header') %>
+
+  <main id="curriculum-page">
+    <div class="container-fluid px-0">
+      <div class="school-image-top">
+        <h1 class="title">
+          <%= title %>
+        </h1>
+      </div>
+      <% if( title=="Creche" ){ %>
+        <%- include('class/creche') %> 
+        <% }else if(title=="Early years" ){ %>
+          <%- include('class/early') %> 
+            <% }else if(title=="Primary" ){ %>
+              <%- include('class/primary') %> 
+              <%}else if(title=="Secondary" ){%>
+                <%- include('class/secondary') %> 
+                <%}%>
+          </div>
+  </main>
+
+  <%- include('layout/footer') %>

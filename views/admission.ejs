@@ -1,0 +1,53 @@
+<%- include('layout/header') %>
+
+  <main id="admission-page">
+    <div class="container-fluid px-0">
+      <div class="school-image-top">
+        <h1 class="title"><%= title %> </h1>
+      </div>
+      <div class="admission-wrapper">
+        <div class="row">
+          <div class="col-md-8">
+            <div class="admission-procedure">
+              <h1>Admission Procedure</h1>
+              <ol class="admisson-step">
+                <li>Pick up a Registration Form <strong>₦10,000</strong> for Nursery and Primary schools from the Admissions Office.</li>
+                <li>Return completed form with:
+                  <ul class="admission-requirement">
+                    <li>2 Passport Photographs</li>
+                    <li>Photocopy of Immunization Record</li>
+                    <li>Photocopy of Birth Certificate</li>
+                    <li>Transcript or Photocopies of past school results for three previous & consecutive years if the
+                      child has been in school that long.</li>
+                  </ul>
+                </li>
+                <li>Schedules an assessment date with the Head of Nursery/Key stage.</li>
+                <li>Assessments for the primary school takes place in March.
+                  Other assessments take place all year round depending on available openings</li>
+              </ol>
+              <strong class="notice">Assessments for the primary school takes place in March.
+                  Other assessments take place all year round depending on available openings
+              </strong>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="online-admission">
+              <h1>Online Admission</h1>
+              <p>Applications will only be processed;</p>
+              <ul class="online-admission-procedure">
+                <li>Parent need to register as user and then proceed to student Registration</li>
+                <li>If a non refundable application fee of <strong>₦10,000.00</strong> (Ten Thousand Naira Only) has been paid into the
+                  school account and a scanned receipt of payment received by the school accounts department.</li>
+                  <li>If all required documents have been received by the admissions officer. </li>
+              </ul>
+              <a class="block-button" href="/user/register">Click here to apply</a>
+              <!-- <button class="block-button">Click here to apply</button> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+  <%- include('layout/footer') %>

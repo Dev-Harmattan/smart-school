@@ -1,0 +1,128 @@
+<%- include('layout/header', {title: 'Student registration' }) %>
+<main id="student-register">
+  <div class="register-container">
+      <h1>Student registration</h1>
+      <div class="form-progress">
+        <div class="progress-step">
+          <div class="bullet">
+            <span>1</span>
+          </div>
+        </div>
+        <div class="progress-step">
+          <div class="bullet">
+            <span>2</span>
+          </div>
+        </div>
+        <div class="progress-step">
+          <div class="bullet">
+            <span>3</span>
+          </div>
+        </div>
+        <div class="progress-step">
+          <div class="bullet">
+            <span>4</span>
+          </div>
+        </div>
+        <div class="progress-step">
+          <div class="bullet">
+            <span>5</span>
+          </div>
+        </div>
+      </div>
+      <div class="form-outer">
+        <form action="/user/student/register" method="post" enctype="multipart/form-data" id="regForm">
+          <div class="page" style="display: block;">
+            <div class="reg-title">Student Name:</div>
+            <div class="field">
+              <label for="lastName">Last Name</label>
+              <input type="text" name="lastName" id="lastName">
+            </div>
+            <div class="field">
+              <label for="firstName">First Name</label>
+              <input type="text" name="firstName" id="fistName">
+            </div>
+            <div class="field">
+              <label for="middleName">Middle Name</label>
+              <input type="text" name="middleName" id="middleName">
+            </div>
+          </div>
+          <div class="page">
+            <div class="reg-title">Gender & Birthdate:</div>
+            <div class="field">
+              <label for="gender">Gender</label>
+              <select name="gender" id="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="birthDate">Birth Date</label>
+              <input type="date" name="birthDate" id="birthDate" required>
+            </div>
+          </div>
+          <div class="page"  >
+            <div class="reg-title">Parent Info:</div>
+            <div class="field">
+              <label for="parentOccupation">Parent Occupation</label>
+              <input type="text" name="parentOccupation" id="parentOccupation">
+            </div>
+            <div class="field">
+              <label for="stateOfOrigin">State of Origin</label>
+              <input type="text" name="stateOfOrigin" id="stateOfOrigin">
+            </div>
+            <div class="field">
+              <label for="residentAddress">Residential Address</label>
+              <input type="text" name="residentAddress" id="residentAddress">
+            </div>
+            <div class="field">
+              <label for="state">Recidential State</label>
+              <input type="text" name="state" id="state">
+            </div>
+          </div>
+  
+          <div class="page" >
+            <div class="reg-title">Former School Info:</div>
+            <div class="field">
+              <label for="formalSchoolName">Formal School Name</label>
+              <input type="text" name="formalSchoolName" id="formalSchoolName">
+            </div>
+            <div class="field">
+              <label for="formerClass">Former Class</label>
+              <input type="text" name="formerClass" id="formerClass" placeholder="Primary 1 - SSS 3">
+            </div>
+            <div class="field">
+              <label for="reason">Reason you left</label>
+              <textarea name="reason" id="reason" cols="30" rows="3"></textarea>
+            </div>
+          </div>
+
+          <div class="page">
+            <div class="reg-title">Admission Payment Reciept:</div>
+            <div class="field">
+              <label for="reciept">Payment Reciept</label>
+              <input type="file" name="reciept" id="reciept" placeholder=".Jpg .Jpec .png .gif format">
+            </div>
+          </div>
+
+          <div id="loader-wrapper">
+            <div id="loader"></div>
+            <div class="loader-text">Loading....</div>
+          </div>
+          
+          <div class="button-wrapper" id="prevNextButtonWrapper">
+            <div class="buttons">
+              <button id="prevButton" type="button">Previous</button>
+              <button id="nextButton" type="button">Next</button>
+            </div>
+          </div>
+
+          
+  
+        </form>
+      </div>
+
+  </div>
+</main>
+
+<%- include('layout/footer', {title: 'Student registration'}) %>
