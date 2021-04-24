@@ -832,6 +832,15 @@ main{
   .profile-charts-wrapper{
     grid-template-columns: 1fr;
   }
+
+
+  .profile-cards{
+    grid-auto-rows: minmax(500px, auto);
+  }
+  
+  .exam-info{
+    overflow-y: auto;
+  }
 }
 
 @media only screen and (max-width: 480px){
@@ -857,6 +866,14 @@ main{
     display: grid;
     grid-template-columns: 1fr;
     gap: 20px;
+  }
+
+  .profile-cards{
+    grid-auto-rows: minmax(500px, auto);
+  }
+  
+  .exam-info{
+    overflow-y: auto;
   }
 }
 

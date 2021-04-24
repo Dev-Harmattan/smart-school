@@ -2672,7 +2672,7 @@ input.invalid{
     padding: 0 30px 45px;
   }
   #admission-page{
-    padding: 70px 0px;
+    padding-bottom: 70px;
     background: var(--white);
   }
   .school-image-top{
@@ -2831,7 +2831,7 @@ input.invalid{
     padding: 0 30px 45px;
   }
   #admission-page{
-    padding: 70px 0px;
+    padding-bottom: 70px;
     background: var(--white);
   }
   .school-image-top{
@@ -2979,7 +2979,7 @@ input.invalid{
     padding: 0 20px 45px;
   }
   #admission-page{
-    padding: 70px 0px;
+    padding-bottom: 70px;
     background: var(--white);
   }
   .school-image-top{
