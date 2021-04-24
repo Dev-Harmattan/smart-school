@@ -1,41 +1,45 @@
 const axios = require("axios").default;
+const fetch = require("node-fetch");
+const News = require('../models/news');
+const Result =  require('../models/result');
 
 exports.getMessages = (req, res, next) => {
-  let messages = [];
-  axios(`/admin/dashboard/message`)
-    .then((response) => {
-      req.messages = response.data.message;
+
+  News.find({}).exec((err, datas) => {
+    if(err){
+      console.error(err);
       next();
-    })
-    .catch((err) => {
-      req.messages = [];
-      next()
-    });
+    }else{
+      req.messages = datas
+      next();
+    }
+  })
 }
 
 
 
 exports.getResult = (req, res, next) => {
   const userId = req.session.user.user._id;
-  axios(`/admin/dashboard/result/${userId}`)
-    .then((response) => {
-      req.result = response.data.data;
+  Result.findOne({user: userId}).exec((err, result) => {
+    if(err){
+      console.log(err);
       next();
-    })
-    .catch((err) => {
-      req.result = [];
+    }else{
+        req.result = result.resultDetails;
       next();
-    });     
+    }
+  })
 }
 
 exports.getResults = (req, res, next) => {
-  axios(`/admin/dashboard/result`)
-    .then((response) => {
-      req.results = response.data.data;
+  Result.findOne({}).exec((err, result) => {
+    if(err){
+      console.log(err);
       next();
-    })
-    .catch((err) => {
-      req.results = [];
+    }else{
+      req.results = result.resultDetails;
       next();
-    });
+    }
+
+  })
 }

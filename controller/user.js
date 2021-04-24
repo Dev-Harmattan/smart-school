@@ -227,5 +227,4 @@ exports.userSetting = ( req, res ) => {
     message:''
   });
   
-
 }
